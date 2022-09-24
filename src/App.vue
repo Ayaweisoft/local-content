@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <template>
   <div class="scroll-smooth ">
-    <header class="fixed flex items-center justify-between w-full px-24 py-2 bg-white shadow-md">
+    <header class="fixed z-10 flex items-center justify-between w-full px-24 py-2 bg-white shadow-md">
       <div>Logo</div>
       <div class="flex gap-4">
           <a href="#verifyMembership">Verify Membership</a>
