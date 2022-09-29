@@ -12,17 +12,17 @@
       <span class="">Become a part of us today</span>
     </div> 
         
-    <div class="py-6 text-center">
+    <div class="py-6 text-center px-16">
       <p class="mb-2 text-xs opacity-95">Choose your type of registration</p>
       <div class="flex items-center justify-center">
         <div class="">
-          <div class="px-12 border border-r-0 py-1 opacity-90 text-xs bg-[#2BC241] text-white" for="individual">
-            <RouterLink to="/individual">individual</RouterLink>
+          <div class="border border-r-0 opacity-90 text-xs bg-[#2BC241] text-white" for="individual">
+            <RouterLink class="px-12 py-1" to="/individual">individual</RouterLink>
           </div>
         </div>
         <div class="">
-          <div class="px-12 py-1 text-xs border opacity-90" for="company">
-            <RouterLink to="/company">Company</RouterLink>
+          <div class="text-xs border opacity-90" for="company">
+            <RouterLink class="px-12 py-1" to="/company">Company</RouterLink>
             
           </div>
         </div>
@@ -32,9 +32,9 @@
       </div>
     </div>
 
-    <!-- <RouterView /> -->
+    <RouterView />
 
-    <form action="" class="px-12 text-xs">
+    <!-- <form action="" class="px-16 text-xs">
       <span class="p-0 pr-24 text-xl font-semibold border-b-2 opacity-70">Personal Information</span>
       <div class="grid grid-cols-3 gap-4 py-4 gap-x-20">
           <div class="flex flex-col">
@@ -109,7 +109,7 @@
       <div class="mb-8 text-center mt-28">
           <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-xs font-semibold">Proceed</button> 
       </div>
-    </form>
+    </form> -->
 
 
     <!-- <form action="" class="px-12 text-xs">
@@ -181,4 +181,3 @@
   </form> -->
   </main>
 </template>
-

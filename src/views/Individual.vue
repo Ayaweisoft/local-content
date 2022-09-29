@@ -6,8 +6,9 @@
   
   
   <template>
-    <main class="pt-12">
-        <form action="" class="px-12 text-xs">
+    <div class="pt-12">
+        hello
+        <!-- <form action="" class="px-16 text-xs">
             <span class="p-0 pr-24 text-xl font-semibold border-b-2 opacity-70">Personal Information</span>
             <div class="grid grid-cols-3 gap-4 py-4 gap-x-20">
                 <div class="flex flex-col">
@@ -82,7 +83,7 @@
             <div class="mb-8 text-center mt-28">
                 <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-xs font-semibold">Proceed</button> 
             </div>
-        </form>
+        </form> -->
 
 
         <!-- <form action="" class="px-12 text-xs">
@@ -152,7 +153,7 @@
                 <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-xs font-semibold">Next</button> 
             </div>
         </form> -->
-    </main>
+    </div>
   </template>
   
   

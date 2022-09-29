@@ -28,7 +28,7 @@
                 <img src="../assets/progress-1.svg" alt="progress bar">
             </div>
         </div>
-        <form action="" class="px-12 text-xs">
+        <form action="" class="px-16 text-xs">
             <span class="p-0 pr-24 text-xl font-semibold border-b-2 opacity-70">CEO Personal Details</span>
             <div class="grid grid-cols-3 gap-4 py-4 gap-x-20">
                 <div class="flex flex-col">
