@@ -12,18 +12,18 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+    // {
+    //   path: '/register',
+    //   name: 'register',
+    //   component: RegisterView,
+    // },
     {
-      path: '/register',
-      name: 'register',
-      component: RegisterView,
-    },
-    {
-      path: '/individual',
+      path: '/register/individual',
       name: 'individual',
       component: IndividualView,
     },
     {
-      path: '/company',
+      path: '/register/company',
       name: 'company',
       component: CompanyView,
     },
