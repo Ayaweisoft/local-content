@@ -16,23 +16,22 @@
     <div class="">
         <RegisterHero registration="individual" />
         <form action="" class="px-4 sm:px-16 text-sm">
-            <span class="p-0 pr-24 text-xl font-semibold border-b-2 opacity-70">Personal Information</span>
+             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Personal Information</span>
             <div class="sm:grid px-4 grid-cols-3 gap-4 py-4 gap-x-20">
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="title">Title</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
                     <option value="Mr">Mr</option>
-                    <option value="Mr">Mr</option>
-                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
                 </select>
                 </div>
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="marital_status">Marital Status</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="marital_status" id="marital_status">
-                    <option value="Mr">Mr</option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
                 </select>
                 </div>
                 <div class="flex flex-col py-2">
@@ -46,10 +45,9 @@
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="religion">Religion</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="religion" id="religion">
-                    <option value="Mr">Mr</option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
+                    <option value="christain">Christain</option>
+                    <option value="muslim">Muslim</option>
+                    <option value="traditional">Traditional</option>
                 </select>
                 </div>
                 <div class="flex flex-col py-2">
@@ -94,14 +92,14 @@
 
 
         <!-- <form action="" class="px-12 text-xs">
-            <span class="p-0 pr-24 text-xl font-semibold border-b-2 opacity-70">Referee Declaration</span>
+             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Referee Declaration</span>
             <div class="grid grid-cols-3 gap-4 py-4 gap-x-20">
                 <div class="flex flex-col">
                 <label class="pl-2 text-sm opacity-70" for="title">Title</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
                     <option value="Mr">Mr</option>
-                    <option value="Mr">Mr</option>
-                    <option value="Mr">Mr</option>
+                    <option value="Mr">Mrs</option>
+                    <option value="Mr">Miss</option>
                 </select>
                 </div>
                 <div class="flex flex-col">
@@ -144,7 +142,7 @@
 
 
         <!-- <form action="" class="px-12 text-xs">
-            <span class="p-0 pr-24 text-xl font-semibold border-b-2 opacity-70">Appicant Declaration</span>
+             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Appicant Declaration</span>
             <div class="grid grid-cols-1 gap-4 py-4 gap-x-20 w-1/3">
                 <div class="flex flex-col">
                 <label class="pl-2 text-sm opacity-70" for="first_name">Name</label>
