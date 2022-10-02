@@ -81,8 +81,9 @@
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="gender">Gender</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
-                    <option value="Mr">Mr</option>
-                </select>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
                 </div>
             </div>
             <div class="mb-8 text-center mt-28">
@@ -98,8 +99,8 @@
                 <label class="pl-2 text-sm opacity-70" for="title">Title</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
                     <option value="Mr">Mr</option>
-                    <option value="Mr">Mrs</option>
-                    <option value="Mr">Miss</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
                 </select>
                 </div>
                 <div class="flex flex-col">

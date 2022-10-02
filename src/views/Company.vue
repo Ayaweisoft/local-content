@@ -17,25 +17,32 @@
             <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">CEO Personal Details</span>
             <div class="sm:grid px-4 grid-cols-3 gap-4 py-4 gap-x-20">
                 <div class="flex flex-col py-2">
-                <label class="pl-2 text-sm opacity-70" for="title">Title</label>
-                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
-                  <option value="Mr">Mr</option>
-                  <option value="Mrs">Mrs</option>
-                  <option value="Miss">Miss</option>
-                </select>
+                  <label class="pl-2 text-sm opacity-70" for="title">Title</label>
+                  <!-- <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
+                      <option value="Mr">Mr</option>
+                      <option value="Mrs">Mrs</option>
+                      <option value="Miss">Miss</option>
+                  </select> -->
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" list="title" name="title" id="title" placeholder="Miss">
+                  <datalist id="title">
+                      <option value="Edge" />
+                      <option value="Firefox" />
+                      <option value="Chrome" />
+                      <option value="Opera" />
+                      <option value="Safari" />
+                  </datalist>
                 </div>
                 <div class="flex flex-col py-2">
-                <label class="pl-2 text-sm opacity-70" for="marital_status">Marital Status</label>
-                <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="marital_status" id="marital_status">
-                    <option value="Mr">Mr</option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
-                </select>
-                </div>
-                <div class="flex flex-col py-2">
-                <label class="pl-2 text-sm opacity-70" for="address">Current Address</label>
-                <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your current Address">
+                  <label class="pl-2 text-sm opacity-70" for="marital_status">Marital Status</label>
+                  <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="marital_status" id="marital_status">
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                  </select>
+                  </div>
+                  <div class="flex flex-col py-2">
+                  <label class="pl-2 text-sm opacity-70" for="address">Current Address</label>
+                  <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your current Address">
                 </div>
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="first_name">First Name</label>
@@ -44,10 +51,9 @@
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="religion">Religion</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="religion" id="religion">
-                    <option value="Mr">Mr</option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
-                    <option value="Mr"></option>
+                  <option value="christain">Christain</option>
+                  <option value="muslim">Muslim</option>
+                  <option value="traditional">Traditional</option>
                 </select>
                 </div>
                 <div class="flex flex-col py-2">
@@ -81,7 +87,8 @@
                 <div class="flex flex-col py-2">
                 <label class="pl-2 text-sm opacity-70" for="gender">Gender</label>
                 <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
-                    <option value="Mr">Mr</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
                 </select>
                 </div>
             </div>

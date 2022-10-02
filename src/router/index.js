@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import RegisterView from '../views/RegisterView.vue';
 import IndividualView from '../views/Individual.vue';
 import CompanyView from '../views/Company.vue';
+import DashboardView from '../views/Dashboard.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,11 @@ const router = createRouter({
     //   name: 'register',
     //   component: RegisterView,
     // },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: DashboardView,
+    },
     {
       path: '/register/individual',
       name: 'individual',
