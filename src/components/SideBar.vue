@@ -22,7 +22,7 @@
         </div>
         <button class="flex gap-6 items-center bg-[#E7E7E7] p-3 rounded-xl">
             <img src="../assets/logout-icon.svg" alt="" />
-            <span class="text-[#FF0000] font-medium">Logout</span>
+            <span class="text-[#FF0000] font-medium text-sm">Logout</span>
         </button>
     </div>
 </template>
