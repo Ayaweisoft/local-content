@@ -1,3 +1,4 @@
+
 <script>
 
 </script>
@@ -15,4 +16,3 @@
         <h2 class="text-[#2BC241] text-[27px] font-medium mb-12">List of Registered Members</h2>
     </div>
 </template>
-  
