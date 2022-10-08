@@ -3,9 +3,7 @@
 
 </script>
   
-  
-  
-  
+
 <template>
     <div class="py-8 p-8">
         <div class="relative  mb-12">
