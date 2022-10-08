@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router';
         <a href="#verifyMembership">Verify Membership</a>
         <RouterLink to="/">Home</RouterLink>
         <div class="px-2 py-2 text-xs bg-green-600">
-          <RouterLink to="/register">Become a Member</RouterLink>
+          <RouterLink to="/register/individual" class="text-white">Become a Member</RouterLink>
         </div>
         
       </div>
