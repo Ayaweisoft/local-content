@@ -1,77 +1,36 @@
-<!-- <script>
-  export default {
-    name: 'my-component',
-    data(){
-      return {
-        columns: [
-          {
-            label: 'Name',
-            field: 'name',
-          },
-          {
-            label: 'Age',
-            field: 'age',
-            type: 'number',
-          },
-          {
-            label: 'Created On',
-            field: 'createdAt',
-            type: 'date',
-            dateInputFormat: 'yyyy-MM-dd',
-            dateOutputFormat: 'MMM do yy',
-          },
-          {
-            label: 'Percent',
-            field: 'score',
-            type: 'percentage',
-          },
-        ],
-        rows: [
-          { id:1, name:"John", age: 20, createdAt: '',score: 0.03343 },
-          { id:2, name:"Jane", age: 24, createdAt: '2011-10-31', score: 0.03343 },
-          { id:3, name:"Susan", age: 16, createdAt: '2011-10-30', score: 0.03343 },
-          { id:4, name:"Chris", age: 55, createdAt: '2011-10-11', score: 0.03343 },
-          { id:5, name:"Dan", age: 40, createdAt: '2011-10-21', score: 0.03343 },
-          { id:6, name:"John", age: 20, createdAt: '2011-10-31', score: 0.03343 },
-        ],
-      };
-    },
-  };
-  </script> -->
+<script setup>  
+  import { ref } from 'vue'
+  import CardSuccess from "./CardSuccess.vue";
 
-  
-  <script>
-  // import { Header, Item } from 'vue3-easy-data-table';
-  
-  export default {
-    setup() {
-      const headers = [
-        { text: "ID Number", value: "id_number" },
-        { text: "Member Name", value: "name", sortable: true },
-        { text: "Date Created", value: "created_at", sortable: true },
-        { text: "Status", value: "status", sortable: true },
-        { text: "Membership type", value: "type", sortable: true },
-        { text: "Actions", value: "actions", sortable: true }
-      ];
-  
-      const items = [
-        { "id_number":1000, "name": "Curry", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-        { "id_number":1001, "name": "James", "created_at":"14-03-2002", "status": "verified", "type": "company", "actions": "Generate" },
-        { "id_number":1002, "name": "Jordan", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-        { "id_number":1002, "name": "Nicholas", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-        { "id_number":1002, "name": "Duadei", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-        { "id_number":1002, "name": "Victor", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-        { "id_number":1002, "name": "Dein", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-        { "id_number":1002, "name": "Marvellous", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
-      ];
-  
-      return {
-        headers,
-        items
-      };
-    },
-  };
-  </script>
+  const modal = ref(null)
+  function generateCard(id) {
+    modal.value = id
+  }
+
+  function closeModal() {
+      modal.value = null
+  }
+
+  const headers = [
+    { text: "ID Number", value: "id_number" },
+    { text: "Member Name", value: "name", sortable: true },
+    { text: "Date Created", value: "created_at", sortable: true },
+    { text: "Status", value: "status", sortable: true },
+    { text: "Membership type", value: "type", sortable: true },
+    { text: "Actions", value: "actions", sortable: true }
+  ];
+
+  const items = [
+    { "id_number":1000, "name": "Curry", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+    { "id_number":1001, "name": "James", "created_at":"14-03-2002", "status": "verified", "type": "company", "actions": "Generate" },
+    { "id_number":1002, "name": "Jordan", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+    { "id_number":1003, "name": "Nicholas", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+    { "id_number":1004, "name": "Duadei", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+    { "id_number":1005, "name": "Victor", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+    { "id_number":1006, "name": "Dein", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+    { "id_number":1007, "name": "Marvellous", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
+  ];
+</script>
 <template>
   <div class="p-8 py-8">
     <div class="relative mb-12">
@@ -92,7 +51,7 @@
         </template>
         <template #item-actions="item">
           <div class="customize-item">
-            <button class="w-full text-white bg-[#2BC241] py-1 px-2">
+            <button @click="generateCard(item.id_number)" class="w-full text-white bg-[#2BC241] py-1 px-2">
               {{ item.actions }}
             </button>
           </div>
@@ -100,6 +59,9 @@
       </EasyDataTable>  
     </div>
   </div>
+
+  <!-- modal -->
+  <CardSuccess :id="modal" v-if="modal" @close="closeModal" />
 </template>
   
   
