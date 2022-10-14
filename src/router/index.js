@@ -13,25 +13,27 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-    // {
-    //   path: '/register',
-    //   name: 'register',
-    //   component: RegisterView,
-    // },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterView,
+      children: [
+        {
+          path: 'individual',
+          name: 'individual',
+          component: IndividualView,
+        },
+        {
+          path: 'company',
+          name: 'company',
+          component: CompanyView,
+        },
+      ]
+    },
     {
       path: '/dashboard',
       name: 'Dashboard',
       component: DashboardView,
-    },
-    {
-      path: '/register/individual',
-      name: 'individual',
-      component: IndividualView,
-    },
-    {
-      path: '/register/company',
-      name: 'company',
-      component: CompanyView,
     },
     // {
     //   path: '/about',

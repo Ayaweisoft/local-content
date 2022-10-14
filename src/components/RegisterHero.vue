@@ -39,9 +39,6 @@
                 </div>
             </div>
         </div>
-        <div  class="my-12 overflow-hidden flex justify-center">
-          <img src="../assets/progress-1.svg" alt="progress bar">
-        </div>
       </div>
     </div>
   </template>
