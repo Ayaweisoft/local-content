@@ -4,6 +4,7 @@ import RegisterView from '../views/RegisterView.vue';
 import IndividualView from '../views/Individual.vue';
 import CompanyView from '../views/Company.vue';
 import DashboardView from '../views/Dashboard.vue';
+import LoginView from '../views/Login.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,25 +14,32 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-    // {
-    //   path: '/register',
-    //   name: 'register',
-    //   component: RegisterView,
-    // },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterView,
+      children: [
+        {
+          path: 'individual',
+          name: 'individual',
+          component: IndividualView,
+        },
+        {
+          path: 'company',
+          name: 'company',
+          component: CompanyView,
+        },
+      ]
+    },
     {
       path: '/dashboard',
       name: 'Dashboard',
       component: DashboardView,
-    },
-    {
-      path: '/register/individual',
-      name: 'individual',
-      component: IndividualView,
-    },
-    {
-      path: '/register/company',
-      name: 'company',
-      component: CompanyView,
     },
     // {
     //   path: '/about',
@@ -42,6 +50,15 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue'),
     // },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    if (to.hash) {
+      return {selector: to.hash}
+    } else {
+      return { top: 0,behavior: 'smooth', }
+      // return {x: 0, y: 0}
+    }
+  },
 });
 
 export default router;
