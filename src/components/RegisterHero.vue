@@ -13,34 +13,30 @@
   
   <template>
     <div class="pt-12">
-      <div class="bg-cover px-16 py-6 text-white h-36 overflow-hidden whoWeArePic bg-[url('./assets/register.svg')]">
-        <h2 class="mb-4 text-2xl font-medium">Welcome to the registration page</h2>
+      <div class="sm:block flex items-center justify-center flex-col bg-cover px-8 sm:px-16 py-12 text-white overflow-hidden whoWeArePic bg-[url('./assets/register.svg')]">
+        <h2 class="mb-6 text-2xl font-medium sm:text-left text-center">Welcome to the registration page</h2>
         <span class="">Become a part of us today</span>
       </div> 
           
-      <div class="py-6 text-center px-4 sm:px-16">
-        <p class="mb-2 text-sm opacity-95">Choose your type of registration</p>
+      <div class="py-2 pt-6 text-center px-4 sm:px-16">
+        <p class="mb-2 text-sm opacity-">Choose your type of registration</p>
         <div class="flex items-center justify-center">
             <div v-if="registration === 'individual'" class="flex items-center justify-center">
-                <div class="border border-r-0 opacity-90 py-2 text-xs bg-[#2BC241] text-white" for="individual">
+                <div class="border border-r-0 opacity-90 py-2 text-xs bg-[#2BC241] text-white hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all" for="individual">
                     <RouterLink class="px-12 py-2" to="/register/individual">individual</RouterLink>
                 </div>
-                
-                <div class="text-xs border opacity-90 py-2" for="company">
+                <div class="text-xs border opacity-90 py-2 cursor-pointer hover:bg-[#f0e8e8] active:scale-95 transition-all" for="company">
                     <RouterLink class="px-12 py-2" to="/register/company">Company</RouterLink>
                 </div>
             </div>
             <div v-else-if="registration === 'company'"  class="flex items-center justify-center">
-                <div class="border border-r-0 opacity-90 py-2 text-xs" for="individual">
+                <div class="border border-r-0 opacity-90 py-2 text-xs hover:bg-[#f0e8e8] cursor-pointer active:scale-95 transition-all" for="individual">
                     <RouterLink class="px-12 py-2" to="/register/individual">individual</RouterLink>
                 </div>
-                <div class="text-xs border opacity-90 py-2  bg-[#2BC241] text-white" for="company">
+                <div class="text-xs border opacity-90 py-2  bg-[#2BC241] text-white hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all" for="company">
                     <RouterLink class="px-12 py-2" to="/register/company">Company</RouterLink>
                 </div>
             </div>
-        </div>
-        <div  class="my-12 overflow-hidden flex justify-center">
-          <img src="../assets/progress-1.svg" alt="progress bar">
         </div>
       </div>
     </div>

@@ -1,56 +1,66 @@
 <script>
-import Header from '../components/Header.vue';
-import headerImage from '../assets/Rectangle 139.svg';
-import FooterImage from '../assets/Rectangle 145.svg';
-import WhoWeAreImage from '../assets/Rectangle 141.svg';
-import Vector from '../assets/Vector 1.svg';
-
-export default {
-  setup() {
-    var HeaderImage = '../assets/Rectangle 139.svg';
-    var FooterImage = '../assets/Rectangle 145.svg';
-    var WhoWeAreImage = '../assets/Rectangle 141.svg';
-    var Vector = '../assets/Vector 1.svg';
-
-    console.log(HeaderImage);
-
-    return {
-      HeaderImage,
-      FooterImage,
-      WhoWeAreImage,
-      Vector,
-    };
-  },
-};
+export default{
+    data: function(){
+        return {
+            hash: this.$route.hash,
+        }
+    },
+    mounted() {
+        this.$nextTick(function () {
+            if (this.$route.hash) {
+                console.log(this.$route.hash);
+                const el = document.querySelector(this.$route.hash);
+                console.log(el);
+                el && el.scrollIntoView();
+            }
+        })
+    },
+    updated() {
+        this.$nextTick(function () {
+            if (this.$route.hash) {
+                console.log(this.$route.hash);
+                const el = document.querySelector(this.$route.hash);
+                console.log(el);
+                el && el.scrollIntoView();
+            }
+        })
+    },
+    methods: {
+        scrollToAnchorPoint(refName) {
+            if (this.$route.hash) {
+                console.log(this.$route.hash);
+                const el = document.querySelector(this.$route.hash);
+                console.log(el);
+                el && el.scrollIntoView();
+            }
+        }
+    }
+}
 </script>
 
 <script></script>
 
 <template>
-  <main class="w-full">
-    <Header />
-    <div class="bg-cover h-[50vh] w-full landing relative" style="background-image: url('src/assets/Rectangle 139.svg')">
-      hiii
-    </div>
-    <div class="flex flex-col md:flex-row items-center h-fit md:h-[90vh] justify-center w-full py-14 px-10 md:px-24 gap-14 whoWeAre">
-      <div class="bg-cover lg:h-full overflow-hidden whoWeArePic relative">
-        <img class="" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
+  <main class="w-full mt-12" id="home">
+    <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative" style="background-image: url('src/assets/Rectangle 139.svg')"></div>
+    <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 md:max-h-[80vh] overflow-hidden">
+      <div class="flex-1 overflow-hidden">
+        <img class="object-cover h-80 sm:h-96 w-full" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
       </div>
-      <div class="flex flex-col h-full justify-center items-center w-full md:w-3/4 lg:w-2/5 gap-4 whoWeAreText">
-        <h2 class="text-[2rem] font-bold text-center">Who we are</h2>
-        <p class="text-sm">
+      <div class="flex-1 flex flex-col gap-4 overflow-hidden justify-center">
+        <h2 class="text-[2rem] font-bold">Who we are</h2>
+        <p class="text-sm overflow-hidden">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat ornare viverra dui bibendum. Non malesuada
           cursus lacus adipiscing lacus. Nullam in mi faucibus cum viverra. Duis a viverra arcu aliquet aliquam feugiat
           nunc. Tellus mauris habitasse posuere mus est senectus pharetra libero commodo. Turpis massa ac duis
           sollicitudin urna lorem vitae congue. Orci sed viverra morbi placerat amet molestie convallis. Rhoncus cursus
           vitae in dolor tellus fermentum nulla amet. Suspendisse felis interdum massa varius ut malesuada sem. Ultrices
-
         </p>
       </div>
     </div>
     <div
-      class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 h-[60vh] h-full text-white justify-center md:justify-between h-full w-full bg-cover gap-4 md:gap-14 whatWeDo bg-[]"
-      style="background-image: url('src/assets/Rectangle 141.svg')"
+      class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 min-h-[60vh] text-white justify-center md:justify-between w-full bg-cover gap-4 md:gap-14 whatWeDo bg-[url('assets/Rectangle4.svg')] bg-center"
+      style=""
     >
       <div class="flex flex-col gap-4 missionStatement">
         <h2 class="text-[1.7rem] md:text-[2rem] font-bold text-center">Our Mission Statement</h2>
@@ -69,42 +79,41 @@ export default {
         </p>
       </div>
     </div>
-    <div class="whyYouShouldJoinUs w-full md:h-[90vh] flex flex-col gap-10 px-10 py-14">
+    <div class="px-10 py-14">
       <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
-      <div class="flex flex-col lg:flex-row items-center justify-center gap-2">
-        <div class="flex lg:flex-col gap-4 items-center justify-between h-full row1">
-          <div class="md:w-2/3 w-full text-xs">
+      <div class="flex flex-col mt-8 relative">
+        <div class="flex gap-8 justify-between items-center">
+          <div class="w-40 lg:w-48 md:absolute top-4 text-xs">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
-          <div class="md:w-2/3 w-full text-xs">
+          <div class="w-40 lg:w-48 md:absolute text-xs top-4 right-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
         </div>
-        <svg class="scale-[0.5]" width="588" height="368" viewBox="0 0 588 368" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M370.86 147.264L484.68 2H588M223.86 147.264L115.92 11.2364H0M223.86 231.652L115.92 366H0M370.86 231.652L484.68 366H588" stroke="black" stroke-width="3"/>
-        <ellipse cx="295.5" cy="189" rx="85.5" ry="85" fill="#2BC241"/>
-        </svg>
-
-        <div class="flex md:flex-col gap-4 items-center justify-between h-full row-3">
-          <div class="md:w-2/3 w-full text-xs">
+        <div class="my-8 flex justify-center">
+          <img class="w-1/2" src="../assets/reasons.svg" alt="Member benefit chart">
+          <span class="text-[6px] sm:text-xs md:text-base absolute top-1/2 text-white -translate-y-1/3 -translate-x-1/2 left-1/2">Member</span>
+        </div>
+        <div class="flex gap-8 justify-between items-center">
+          <div class="w-40 lg:w-48 md:absolute text-xs bottom-0 left-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
-          <div class="md:w-2/3 w-full text-xs">
+          <div class="w-40 lg:w-48 md:absolute text-xs bottom-0 right-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-4 px-10 md:px-24 py-10 bg-green-600 howToJoinUs">
+    <div class="flex flex-col items-center justify-center gap-4 px-10 md:px-24 py-10 bg-[#2BC241] howToJoinUs">
       <h2 class="text-[2rem] text-center font-bold text-white">How To Join Us</h2>
-      <p class="md:mt-8 text-sm font-semibold text-white">You can join us with just three steps listed below</p>
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6  md:gap-4 card">
+      <p class="md:mt-8 text-sm text-white mb-4 text-center">You can join us with just three steps listed below</p>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6  md:gap-4 mb-12 card">
         <div class="flex flex-col items-center justify-center md:w-1/3 gap-2 px-10 py-4 bg-white">
-          <div class="text-[1rem] font-bold bg-green-200 text-green-600 rounded-full h-8 w-8 grid place-items-center">
+          <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             1
           </div>
           <p class="text-sm text-center">
@@ -112,44 +121,41 @@ export default {
           </p>
         </div>
         <div class="flex flex-col items-center justify-center md:w-1/3 gap-2 px-10 py-4 bg-white">
-          <div class="text-[1rem] font-bold bg-green-200 text-green-600 rounded-full h-8 w-8 grid place-items-center">
-            1
+          <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
+            2
           </div>
           <p class="text-sm text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
           </p>
         </div>
         <div class="flex flex-col items-center justify-center md:w-1/3 gap-2 px-10 py-4 bg-white">
-          <div class="text-[1rem] font-bold bg-green-200 text-green-600 rounded-full h-8 w-8 grid place-items-center">
-            1
+          <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
+            3
           </div>
           <p class="text-sm text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
           </p>
         </div>
       </div>
-      <button class="px-4 py-2 mt-8 font-semibold bg-white">Become a Member</button>
+      <button class="px-4 py-2 mt-8 font-medium bg-white sm:px-20 cursor-pointer active:scale-95 transition-all hover:bg-[#f0e8e8]"><RouterLink to="/register/individual" class="">Become a Member</RouterLink></button>
     </div>
-    <div class= "px-10 md:px-24 py-10 verifyYourMemberShip" id="verifyMembership">
-      <div class="flex flex-col items-start justify-center w-1/3 gap-4">
-        <h2 class="text-[1.5rem]">Verify Your Membership</h2>
+    <div class="px-10 md:px-24 py-12 pt-20 verifyYourMemberShip" id="verifyMembership">
+      <div class="flex flex-col items-start justify-center sm:w-2/3 md:w-1/2 lg:w-2/5">
+        <span class="text-2xl font-medium">Verify Your Membership</span>
         <input
-          class="w-full px-2 py-2 text-xs font-semibold border-2 outline-none"
+          class="w-full my-6 px-2 py-2 text-xs font-semibold border-2 outline-none"
           type="text"
           placeholder="Enter your membership number"
         />
-        <button class="px-6 py-2 text-white bg-green-600">Submit</button>
+        <button class="px-6 py-2 text-sm text-white bg-[#2BC241] hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Submit</button>
       </div>
     </div>
-    <div
-      class="bg-cover w-full grid text-white place-items-center w-full picFooter px-4 py-14 text-center h-[50vh] font-bold text-[1.6rem] md:text-[3rem] h-full h-2/4"
-      style="background-image: url('src/assets/Rectangle 145.svg')"
-    >
-      <h1 class="md:w-1/2">Together we can achieve great things</h1>
+    <div class="bg-cover bg-[url('assets/Rectangle5.svg')] grid place-items-center px-4 py-14 font-semibold">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl text-white text-center py-8">Together we can <br> achieve great things</h1>
     </div>
-    <div class="footer bg-green-600 h-[35vh] relative px-10 md:px-24 text-white py-10">
-      <div class="text-[3rem] font-bold">LOGO</div>
-      <p class="absolute text-sm font-semibold -translate-x-1/2 bottom-2 left-1/2">Developed by Ayaweisoft</p>
+    <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
+      <div class="text-[3rem] font-semibold text-center sm:text-left">LOGO</div>
+      <p class="absolute text-sm font-semibold left-0 bottom-2 w-full text-center">Developed by Ayaweisoft</p>
     </div>
   </main>
 </template>
