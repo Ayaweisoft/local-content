@@ -301,5 +301,81 @@
         </form> -->
       </main>
   </template>
+
+  <div class="flex flex-col md:flex-row justify-center w-full py-14 px-10 md:px-24 gap-x-14 whoWeAre">
+      <div class="overflow-hidden whoWeArePic relative">
+        <img class="" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
+      </div>
+      <div class="flex flex-col justify-center items-center w-full md:w-3/4 lg:w-2/5 gap-4 whoWeAreText">
+        <h2 class="text-[2rem] font-bold text-center">Who we are</h2>
+        <p class="text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat ornare viverra dui bibendum. Non malesuada
+          cursus lacus adipiscing lacus. Nullam in mi faucibus cum viverra. Duis a viverra arcu aliquet aliquam feugiat
+          nunc. Tellus mauris habitasse posuere mus est senectus pharetra libero commodo. Turpis massa ac duis
+          sollicitudin urna lorem vitae congue. Orci sed viverra morbi placerat amet molestie convallis. Rhoncus cursus
+          vitae in dolor tellus fermentum nulla amet. Suspendisse felis interdum massa varius ut malesuada sem. Ultrices
+        </p>
+      </div>
+    </div>
+    <div class="whyYouShouldJoinUs w-full md:h-[90vh] flex flex-col gap-10 px-10 py-14">
+      <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-2 h-full">
+        <div class="flex lg:flex-col gap-4 items-center justify-between h-full row1">
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+        <div class="flex">
+          <svg class="h-full" width="588" height="368" viewBox="0 0 588 368" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M370.86 147.264L484.68 2H588M223.86 147.264L115.92 11.2364H0M223.86 231.652L115.92 366H0M370.86 231.652L484.68 366H588" stroke="black" stroke-width="3"/>
+            <ellipse cx="295.5" cy="189" rx="85.5" ry="85" fill="#2BC241"/>
+            </svg>
+        </div>
+        <div class="flex md:flex-col gap-4 items-center justify-between h-full row-3">
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-2/3 w-full text-xs">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-10 py-14">
+      <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
+      <div class="flex flex-col mt-8 relative">
+        <div class="flex gap-8 justify-between items-center">
+          <div class="md:w-60 lg:absolute top-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-60 lg:absolute top-4 right-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+        <div class="my-8 flex justify-center">
+          <img class="w-1/2" src="../assets/reasons.svg" alt="Reasons">
+        </div>
+        <div class="flex gap-8 justify-between items-center">
+          <div class="md:w-60 lg:absolute bottom-0 left-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+          <div class="md:w-60 lg:absolute bottom-0 right-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
+            Turpis.
+          </div>
+        </div>
+      </div>
+    </div>
     
     

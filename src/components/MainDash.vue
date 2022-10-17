@@ -32,13 +32,13 @@
   ];
 </script>
 <template>
-  <div class="p-8 py-8">
+  <div class="py-16 p-8 sm:py-8 flex-[2_1_auto] lg:flex-[4_1_auto]">
     <div class="relative mb-12">
         <input type="text" name="search" id="search" class="bg-[#D9D9D980] w-full py-2 px-4 rounded-full">
         <img src="../assets/search-icon.svg" alt="search" class="absolute -translate-y-1/2 top-1/2 left-5">
         <span class="absolute text-sm -translate-y-1/2 top-1/2 left-16 opacity-70">search for member</span>
     </div>
-    <h2 class="text-[#2BC241] text-[27px] font-medium mb-12">List of Registered Members</h2>
+    <h2 class="text-[#2BC241] text-2xl sm:text-[27px] font-medium mb-12 sm:text-left text-center">List of Registered Members</h2>
     <div>
       <EasyDataTable
         :headers="headers"

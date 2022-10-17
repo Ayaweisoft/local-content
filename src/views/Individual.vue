@@ -19,8 +19,8 @@
   
 
 <template>
-    <div class="">
-        <div  class="my-12 overflow-hidden flex justify-center">
+    <div class="my-12">
+        <div  class="overflow-hidden flex justify-center">
             <!-- <img src="../assets/progress-1.svg" alt="progress bar"> -->
             <Progress :step="step" />
         </div>

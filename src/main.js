@@ -7,6 +7,7 @@ import VueGoodTablePlugin from 'vue-good-table';
 
 import Vue3EasyDataTable from 'vue3-easy-data-table';
 import 'vue3-easy-data-table/dist/style.css';
+
 // import the styles 
 // import 'vue-good-table/dist/vue-good-table.css'
 
