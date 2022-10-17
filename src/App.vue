@@ -13,7 +13,6 @@ import { RouterLink, RouterView } from 'vue-router';
         <div class="px-2 py-2 text-xs bg-green-600">
           <RouterLink to="/register/individual" class="text-white">Become a Member</RouterLink>
         </div>
-        
       </div>
     </header>
 
