@@ -23,7 +23,7 @@
         <Progress :step="step" />
         <form action="" class="">
             <Individual1 @nextStep="step++" v-if="step == 1" />
-            <Individual2 @prevStep="step--" @nextStep="step++" v-else-if="step == 2"/>
+            <Individual2 @prevStep="step--" @nextStep="step++" v-else-if="step == 2" />
             <Individual3 @prevStep="step--" v-else-if="step == 3" />
         </form>
     </div>

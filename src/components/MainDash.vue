@@ -32,7 +32,7 @@
   ];
 </script>
 <template>
-  <div class="py-16 p-8 sm:py-8 flex-[2_1_auto] lg:flex-[4_1_auto]">
+  <div class="py-16 p-8 sm:py-8 flex-[2_1_500px] md:flex-[3_1_auto] lg:flex-[4_1_auto]">
     <div class="relative mb-12">
         <input type="text" name="search" id="search" class="bg-[#D9D9D980] w-full py-2 px-4 rounded-full">
         <img src="../assets/search-icon.svg" alt="search" class="absolute -translate-y-1/2 top-1/2 left-5">

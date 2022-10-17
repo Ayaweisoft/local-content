@@ -1,6 +1,6 @@
-<script>
+<script setup>
+    defineEmits(['prevStep', 'nextStep'])
 </script>
-  
   
 <template>
     <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">Organisation Profile</span>

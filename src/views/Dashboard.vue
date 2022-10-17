@@ -1,5 +1,4 @@
 <script setup>
-import { ref, onMounted } from 'vue'
     import SideBar from '../components/SideBar.vue'
     import MainDash from '../components/MainDash.vue'
     

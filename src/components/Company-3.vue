@@ -1,4 +1,5 @@
-<script>
+<script setup>
+    defineEmits(['prevStep', 'nextStep'])
 </script>
   
   

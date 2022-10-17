@@ -1,9 +1,41 @@
 <script>
-import Header from '../components/Header.vue';
-import headerImage from '../assets/Rectangle 139.svg';
-import FooterImage from '../assets/Rectangle5.svg';
-import WhoWeAreImage from '../assets/Rectangle4.svg';
-import Vector from '../assets/Vector 1.svg';
+export default{
+    data: function(){
+        return {
+            hash: this.$route.hash,
+        }
+    },
+    mounted() {
+        this.$nextTick(function () {
+            if (this.$route.hash) {
+                console.log(this.$route.hash);
+                const el = document.querySelector(this.$route.hash);
+                console.log(el);
+                el && el.scrollIntoView();
+            }
+        })
+    },
+    updated() {
+        this.$nextTick(function () {
+            if (this.$route.hash) {
+                console.log(this.$route.hash);
+                const el = document.querySelector(this.$route.hash);
+                console.log(el);
+                el && el.scrollIntoView();
+            }
+        })
+    },
+    methods: {
+        scrollToAnchorPoint(refName) {
+            if (this.$route.hash) {
+                console.log(this.$route.hash);
+                const el = document.querySelector(this.$route.hash);
+                console.log(el);
+                el && el.scrollIntoView();
+            }
+        }
+    }
+}
 </script>
 
 <script></script>
