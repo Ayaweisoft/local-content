@@ -137,7 +137,7 @@ export default{
           </p>
         </div>
       </div>
-      <button class="px-4 py-2 mt-8 font-medium bg-white sm:px-20">Become a Member</button>
+      <button class="px-4 py-2 mt-8 font-medium bg-white sm:px-20 cursor-pointer active:scale-95 transition-all hover:bg-[#f0e8e8]"><RouterLink to="/register/individual" class="">Become a Member</RouterLink></button>
     </div>
     <div class="px-10 md:px-24 py-12 pt-20 verifyYourMemberShip" id="verifyMembership">
       <div class="flex flex-col items-start justify-center sm:w-2/3 md:w-1/2 lg:w-2/5">
@@ -147,7 +147,7 @@ export default{
           type="text"
           placeholder="Enter your membership number"
         />
-        <button class="px-6 py-2 text-sm text-white bg-[#2BC241]">Submit</button>
+        <button class="px-6 py-2 text-sm text-white bg-[#2BC241] hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Submit</button>
       </div>
     </div>
     <div class="bg-cover bg-[url('assets/Rectangle5.svg')] grid place-items-center px-4 py-14 font-semibold">

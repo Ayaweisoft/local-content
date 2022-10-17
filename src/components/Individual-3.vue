@@ -16,8 +16,8 @@
         </div>
     </div>
     <div class="mb-8 flex justify-between mt-28 flex-col gap-4 sm:flex-row">
-        <button @click.prevent="$emit('prevStep')" type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Previous</button> 
-        <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Submit</button> 
+        <button @click.prevent="$emit('prevStep')" type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Previous</button> 
+        <button type="submit" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Submit</button> 
     </div>
 </template>
   

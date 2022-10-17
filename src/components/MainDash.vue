@@ -51,7 +51,7 @@
         </template>
         <template #item-actions="item">
           <div class="customize-item">
-            <button @click="generateCard(item.id_number)" class="w-full text-white bg-[#2BC241] py-1 px-2">
+            <button @click="generateCard(item.id_number)" class="w-full text-white bg-[#2BC241] py-1 px-2 hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">
               {{ item.actions }}
             </button>
           </div>

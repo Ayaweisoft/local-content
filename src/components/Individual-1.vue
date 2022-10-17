@@ -74,7 +74,7 @@
         </div>
     </div>
     <div class="mb-8 text-center mt-28">
-        <button type="" @click.prevent="$emit('nextStep')" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold">Proceed</button> 
+        <button type="" @click.prevent="$emit('nextStep')" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Proceed</button> 
     </div>
 </template>
   
