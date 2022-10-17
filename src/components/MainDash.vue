@@ -38,7 +38,7 @@
         <img src="../assets/search-icon.svg" alt="search" class="absolute -translate-y-1/2 top-1/2 left-5">
         <span class="absolute text-sm -translate-y-1/2 top-1/2 left-16 opacity-70">search for member</span>
     </div>
-    <h2 class="text-[#2BC241] text-2xl sm:text-[27px] font-medium mb-12 sm:text-left text-center">List of Registered Members</h2>
+    <h2 class="text-[#2BC241] text-2xl sm:text-[27px] py-4 font-medium mb-12 sm:text-left text-center">List of Registered Members</h2>
     <div>
       <EasyDataTable
         :headers="headers"
