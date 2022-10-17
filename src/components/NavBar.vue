@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed z-10 flex items-center justify-between w-full px-4 sm:px-8 md:px-16 py-2 bg-white shadow-md">
+    <header class="fixed top-0 z-10 flex items-center justify-between w-full px-4 sm:px-8 md:px-16 py-2 bg-white shadow-md">
         <RouterLink to="/" class="">Logo</RouterLink>
         <div class="flex text-xs items-center sm:gap-4 gap-2">
           <!-- <a href="#verifyMembership">Verify Membership</a> -->
