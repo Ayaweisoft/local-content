@@ -4,7 +4,7 @@
   
 <template>
     <span class="py-0 pl-2 pr-24 text-xl font-semibold border-b-2 opacity-70 border-[#565656]">CEO Personal Details</span>
-    <div class="sm:grid px-4 grid-cols-3 gap-4 py-4 gap-x-20">
+    <div class="sm:grid px-4 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4 gap-x-20">
         <div class="flex flex-col py-2">
             <label class="pl-2 text-sm opacity-70" for="title">Title</label>
             <!-- <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">

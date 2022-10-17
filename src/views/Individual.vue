@@ -19,12 +19,9 @@
   
 
 <template>
-    <div class="my-12">
-        <div  class="overflow-hidden flex justify-center">
-            <!-- <img src="../assets/progress-1.svg" alt="progress bar"> -->
-            <Progress :step="step" />
-        </div>
-        <form action="" class="px-4 sm:px-16 text-sm">
+    <div class="px-4 sm:px-16 text-sm">
+        <Progress :step="step" />
+        <form action="" class="">
             <Individual1 @nextStep="step++" v-if="step == 1" />
             <Individual2 @prevStep="step--" @nextStep="step++" v-else-if="step == 2"/>
             <Individual3 @prevStep="step--" v-else-if="step == 3" />

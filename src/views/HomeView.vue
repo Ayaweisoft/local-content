@@ -1,36 +1,16 @@
 <script>
 import Header from '../components/Header.vue';
 import headerImage from '../assets/Rectangle 139.svg';
-import FooterImage from '../assets/Rectangle 145.svg';
+import FooterImage from '../assets/Rectangle5.svg';
 import WhoWeAreImage from '../assets/Rectangle4.svg';
 import Vector from '../assets/Vector 1.svg';
-
-export default {
-  setup() {
-    var HeaderImage = '../assets/Rectangle 139.svg';
-    var FooterImage = '../assets/Rectangle 145.svg';
-    var WhoWeAreImage = '../assets/Rectangle 141.svg';
-    var Vector = '../assets/Vector 1.svg';
-
-    console.log(HeaderImage);
-
-    return {
-      HeaderImage,
-      FooterImage,
-      WhoWeAreImage,
-      Vector,
-    };
-  },
-};
 </script>
 
 <script></script>
 
 <template>
-  <main class="w-full mt-12">
-    <Header />
-    <div class="bg-cover h-[50vh] w-full landing relative" style="background-image: url('src/assets/Rectangle 139.svg')">
-    </div>
+  <main class="w-full mt-12" id="home">
+    <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative" style="background-image: url('src/assets/Rectangle 139.svg')"></div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 md:max-h-[80vh] overflow-hidden">
       <div class="flex-1 overflow-hidden">
         <img class="object-cover h-80 sm:h-96 w-full" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
@@ -80,7 +60,7 @@ export default {
             Turpis.
           </div>
         </div>
-        <div class="my-8 flex justify-center re">
+        <div class="my-8 flex justify-center">
           <img class="w-1/2" src="../assets/reasons.svg" alt="Member benefit chart">
           <span class="text-[6px] sm:text-xs md:text-base absolute top-1/2 text-white -translate-y-1/3 -translate-x-1/2 left-1/2">Member</span>
         </div>
@@ -127,7 +107,7 @@ export default {
       </div>
       <button class="px-4 py-2 mt-8 font-medium bg-white sm:px-20">Become a Member</button>
     </div>
-    <div class="px-10 md:px-24 py-10 verifyYourMemberShip" id="verifyMembership">
+    <div class="px-10 md:px-24 py-12 pt-20 verifyYourMemberShip" id="verifyMembership">
       <div class="flex flex-col items-start justify-center sm:w-2/3 md:w-1/2 lg:w-2/5">
         <span class="text-2xl font-medium">Verify Your Membership</span>
         <input
@@ -138,15 +118,12 @@ export default {
         <button class="px-6 py-2 text-sm text-white bg-[#2BC241]">Submit</button>
       </div>
     </div>
-    <div
-      class="bg-cover w-full grid text-white place-items-center w-full picFooter px-4 py-14 text-center h-[50vh] font-bold text-[1.6rem] md:text-[3rem] h-full h-2/4"
-      style="background-image: url('src/assets/Rectangle 145.svg')"
-    >
-      <h1 class="md:w-1/2">Together we can achieve great things</h1>
+    <div class="bg-cover bg-[url('assets/Rectangle5.svg')] grid place-items-center px-4 py-14 font-semibold">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl text-white text-center py-8">Together we can <br> achieve great things</h1>
     </div>
-    <div class="footer bg-green-600 h-[35vh] relative px-10 md:px-24 text-white py-10">
-      <div class="text-[3rem] font-bold">LOGO</div>
-      <p class="absolute text-sm font-semibold -translate-x-1/2 bottom-2 left-1/2">Developed by Ayaweisoft</p>
+    <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
+      <div class="text-[3rem] font-semibold text-center sm:text-left">LOGO</div>
+      <p class="absolute text-sm font-semibold left-0 bottom-2 w-full text-center">Developed by Ayaweisoft</p>
     </div>
   </main>
 </template>

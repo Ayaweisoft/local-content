@@ -9,15 +9,14 @@
 </script>
   
 <template> 
-  <div  class="my-12 overflow-hidden flex justify-center">
-    <!-- <img src="../assets/progress-1.svg" alt="progress bar"> -->
+  <div class="px-4 sm:px-16 text-sm">
     <Progress :step="step" />
+    <form action="" class="">
+      <Company1  @nextStep="step++" v-if="step == 1" />
+      <Company2  @prevStep="step--" @nextStep="step++" v-else-if="step == 2" />
+      <Company3  @prevStep="step--" v-else-if="step == 3" />
+    </form>
   </div>
-  <form action="" class="px-4 sm:px-16 text-sm">
-    <Company1  @nextStep="step++" v-if="step == 1" />
-    <Company2  @prevStep="step--" @nextStep="step++" v-else-if="step == 2" />
-    <Company3  @prevStep="step--" v-else-if="step == 3" />
-  </form>
 </template>
   
   

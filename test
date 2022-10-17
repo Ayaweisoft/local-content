@@ -378,4 +378,6 @@
       </div>
     </div>
     
-    
+    <div class="bg-cover w-full grid text-white place-items-center picFooter px-4 py-14 text-center font-bold bg-[url('assets/Rectangle5.svg')]">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl">Together we can<br>achieve great things</h1>
+    </div>
