@@ -1,5 +1,5 @@
 <script>
-export default{
+export default {
     data: function(){
         return {
             hash: this.$route.hash,
