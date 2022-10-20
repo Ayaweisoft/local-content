@@ -1,6 +1,58 @@
 <script setup>
     defineEmits(['prevStep', 'nextStep'])
+    defineProps(['registration'])
+    //  const registration = {
+    //     name: {
+    //                 title: ref(null),
+    //                 first: ref(null),
+    //                 middle: ref(null),
+    //                 last: ref(null)
+    //             },
+//         email: ref(null),
+//         meta: {
+//                 gender: ref(null)
+//             },
+//         maritalStatus: ref(null),
+//         religion:ref(null),
+//         dob: ref(null),
+//         nationality:ref(null),
+//         address: ref(null),
+//         nin: ref(null),
+//         phone: ref(null),
+
+//         referee: {
+//             name:ref(null),
+//             occupation: ref(null),
+//             address: ref(null),
+//             phone: ref(null),
+//             email: ref(null),
+//             date: ref(null),
+//             signature: ref(null)
+//         },
+
+//         organization: {
+//             address: ref(null),
+//             email: ref(null),
+//             auth: {
+//                     model: ref(null),
+//                     number: ref(null)
+//                 },
+//             contactPerson: ref(null),
+//             whatsapp: ref(null),
+//             declaration: {
+//                 name: ref(null),
+//                 date: ref(null),
+//                 signature: ref(null)
+//             },
+//             authority: ref(null),
+//             state: ref(null),
+//             status: ref(null),
+//             kiv: ref(null),
+//             signature: ref(null)
+//         }
+//     }
 </script>
+  
   
   
 <template>
@@ -9,6 +61,7 @@
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="title">Title</label>
         <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="title" id="title">
+            <option value=""></option>
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
             <option value="Miss">Miss</option>
@@ -16,33 +69,35 @@
         </div>
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="occupation">Occupation</label>
-        <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="occupation" id="occupation" placeholder="Enter your occupation">
+        <input v-model="registration.referee.occupation" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="occupation" id="occupation" placeholder="Enter your occupation">
         </div>
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="phone">Phone Number</label>
-        <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="tel" name="phone" id="phone" placeholder="+234">
+        <input v-model="registration.referee.phone" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="phone" id="phone" placeholder="+234">
         </div>
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="first_name">Name of applicant</label>
-        <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your Name">
+        <input v-model="registration.referee.applicant_name" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="first_name" id="first_name" placeholder="Enter your Name">
         </div>
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="email">Email</label>
-        <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
+        <input v-model="registration.referee.email" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
         </div>
         <div class="flex flex-col py-2">
-        <label class="pl-2 text-sm opacity-70" for="dob">Date of Birth</label>
-        <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
+        <label class="pl-2 text-sm opacity-70" for="dob">Date</label>
+        <input v-model="registration.referee.date" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="date" name="dob" id="dob">
         </div>
 
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="surname">Name of Referee</label>
-        <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="surname" id="surname" placeholder="Enter your surname">
+        <input v-model="registration.referee.name" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="surname" id="surname" placeholder="Enter your surname">
         </div>
         <div class="flex flex-col py-2">
         <label class="pl-2 text-sm opacity-70" for="gender">Gender</label>
-        <select class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
-            <option value="Mr">Mr</option>
+        <select v-model="registration.referee.gender" class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="gender" id="gender">
+            <option value=""></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
         </select>
         </div>
     </div>

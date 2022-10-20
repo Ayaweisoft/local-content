@@ -24,7 +24,7 @@ export const useFetch = () => {
             const json = await response.json();
             
             if (!response.ok) {
-                console.log("not ok")
+                console.log("not ok", json)
                 error.value = json;
                 loading.value = false;
             }
@@ -34,7 +34,7 @@ export const useFetch = () => {
                 loading.value = false;
             }
         } catch (err) {
-            console.log("errored")
+            console.log('error', err)
             loading.value = false;
             error.value = err;
         }

@@ -1,5 +1,6 @@
 <script setup>
     defineEmits(['prevStep', 'nextStep'])
+    defineProps(['registration'])
 </script>
   
 <template>
@@ -7,23 +8,31 @@
     <div class="sm:grid px-4 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4 gap-x-20">
         <div class="flex flex-col py-2">
             <label class="pl-2 text-sm opacity-70" for="address">Contact Address</label>
-            <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your address">
+            <input v-model="registration.address" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="address" id="address" placeholder="Enter your address">
+        </div>
+        <div class="flex flex-col py-2">
+            <label class="pl-2 text-sm opacity-70" for="model">Model</label>
+            <select v-model="registration.organization.auth.model" class="p-2 border opacity-70 rounded-xl border-[#00000080]" name="model" id="model">
+                <option value=""></option>
+                <option value="CAC">CAC</option>
+                <option value="SMEDAN">SMEDAN</option>`
+            </select>
         </div>
         <div class="flex flex-col py-2">
             <label class="pl-2 text-sm opacity-70" for="cac_number">CAC/SMEDAN Number</label>
-            <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="number" name="cac_number" id="cac_number" placeholder="">
+            <input v-model="registration.organization.auth.number" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="number" name="cac_number" id="cac_number" placeholder="">
         </div>
         <div class="flex flex-col py-2">
             <label class="pl-2 text-sm opacity-70" for="email">Email</label>
-            <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
+            <input v-model="registration.organization.email" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="email" name="email" id="email" placeholder="Enter your Email Address">
         </div>
         <div class="flex flex-col py-2">
             <label class="pl-2 text-sm opacity-70" for="whatsapp_number">Whatsapp Number</label>
-            <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="number" name="whatsapp_number" id="whatsapp_number" placeholder="Enter your whatsapp number">
+            <input v-model="registration.organization.whatsapp" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="number" name="whatsapp_number" id="whatsapp_number" placeholder="Enter your whatsapp number">
         </div>
         <div class="flex flex-col py-2">
             <label class="pl-2 text-sm opacity-70" for="contact">Contact Person</label>
-            <input class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="contact" id="contact" placeholder="">
+            <input v-model="registration.organization.contactPerson" class="p-2 border opacity-70 rounded-xl border-[#00000080]" type="text" name="contact" id="contact" placeholder="">
         </div>
     </div>
     <div class="mb-8 flex justify-between mt-28 flex-col gap-4 sm:flex-row">
