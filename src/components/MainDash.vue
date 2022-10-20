@@ -1,6 +1,7 @@
 <script setup>  
   import { ref } from 'vue'
   import CardSuccess from "./CardSuccess.vue";
+  import UserService from "../services/user.service";
 
   const modal = ref(null)
   function generateCard(id) {
@@ -30,6 +31,7 @@
     { "id_number":1006, "name": "Dein", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
     { "id_number":1007, "name": "Marvellous", "created_at":"14-03-2002", "status": "verified", "type": "individual", "actions": "Generate" },
   ];
+
 </script>
 <template>
   <div class="py-16 p-8 sm:py-8 flex-[2_1_500px] md:flex-[3_1_auto] lg:flex-[4_1_auto]">

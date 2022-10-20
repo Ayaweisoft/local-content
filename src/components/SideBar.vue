@@ -1,5 +1,16 @@
-<script>
+<script setup>
+    import { useRouter, useRoute } from 'vue-router'
+    import { useStore } from 'vuex'
 
+    const store = useStore();
+    const router = useRouter();
+    const route = useRoute();
+
+    function logOut() {
+        console.log("clicked")
+        store.dispatch('auth/logout');
+        router.push('/login');
+    } 
 </script>
   
   
@@ -20,7 +31,10 @@
                 </button>
             </div>
         </div>
-        <button class="flex gap-6 items-center bg-[#E7E7E7] p-3 rounded-xl hover:bg-[#e7d2d2] cursor-pointer active:scale-95 transition-all">
+        <button 
+            class="flex gap-6 items-center bg-[#E7E7E7] p-3 rounded-xl hover:bg-[#e7d2d2] cursor-pointer active:scale-95 transition-all"
+            @click="logOut"
+        >
             <img src="../assets/logout-icon.svg" alt="" />
             <span class="text-[#FF0000] font-medium text-sm">Logout</span>
         </button>
