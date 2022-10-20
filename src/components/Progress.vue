@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="overflow-hidden flex justify-center my-8 mb-12 px-8">
+    <div class="overflow-hidden flex justify-center my-4 sm:my-8 sm:mb-12 px-8">
         <template v-if="step == 1">
             <svg width="630" height="30" viewBox="0 0 630 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect opacity="0.9" x="30" y="15" width="275" height="4" fill="#D9D9D9"/>
