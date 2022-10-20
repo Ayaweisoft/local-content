@@ -13,6 +13,6 @@
 </template> 
 <script setup>
     import Button from './Button.vue'
-    const props = defineProps(["id"])
+    const props = defineProps(["id"]) 
 </script>
   
