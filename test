@@ -393,3 +393,100 @@
           </div>
         </div>
       </header>
+
+      <script setup>
+        import { ref } from 'vue'
+        import router from '../router';
+        import Individual1 from "../components/Individual-1.vue"
+        import Individual2 from "../components/Individual-2.vue"
+        import Individual3 from "../components/Individual-3.vue"
+        import Progress from "../components/Progress.vue"
+    
+        import { useFetch } from '../composables/useFetch.js'
+    
+        const { data, error, loading, doFetch } = useFetch()
+    
+        const handleSubmit = async () => {
+            console.log("starting");
+            console.log(registration)
+            await doFetch("https://local-content-server.herokuapp.com/api/v1/submit", registration);
+            console.log("fetched", { "data": data.value, "error": error.value, "loading": loading.value })
+            if (error.value) {
+                console.log("error")
+                if (error.value.errors?.message) {
+                    console.log('returned errors', error.value.errors?.message)
+                }
+            }
+            else if (error.value == null && data.value.error == false) {
+                console.log("no error");
+                alert("your registration was successful")
+                router.push('/')
+            }
+        }
+    
+        const step = ref(1)
+    
+        const registration = {
+          name: {
+                  title: '',
+                  first: '',
+                  middle: '',
+                  last: ''
+              },
+          email: '',
+    
+          meta: {
+            gender: 'M',
+            maritalStatus: 'single',
+            religion:'',
+            dob: '',
+            nationality:'',
+            address: '',
+            nin: '',
+            phone: '',
+          },
+    
+          referee: {
+              name:'',
+              applicant_name:'',
+              gender:'',
+              occupation: '',
+              address: '',
+              phone: '',
+              email: '',
+              date: '',
+              signature: ''
+          },
+    
+          declaration: {
+              name: '',
+              date: '',
+              signature: ''
+          },
+    
+          authority: '',
+          state: '',
+          status: 'pend',
+          kiv: '',
+          signature: ''
+        }
+    //     const registration = {authority: "",
+    //     name: {title: 'Mr', first: 'Duadei', middle: 'Ebi', last: 'Nicholas'},
+    //     email: "Nicholasduadei1583.nd@gmail.com",
+    //     meta: {
+    //         address: "123 okoobo",
+    //         dob: "2111-11-21",
+    //         gender: "M",
+    //         maritalStatus: "single",
+    //         nationality: "Nigeria",
+    //         nin: "123456",
+    //         phone: "09033398824",
+    //         religion: "christain",
+    //     },
+    //     signature: "",
+    //     state: "",
+    //     kiv: "",
+    //     referee: {name: 'Nicholas', applicant_name: 'Duadei', gender: 'Male', occupation: 'ok', address: ''},
+    //     declaration : {name: 'Duadei', date: '1111-11-11', signature: ''},
+    // }
+    </script>
