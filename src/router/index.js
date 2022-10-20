@@ -5,6 +5,17 @@ import IndividualView from '../views/Individual.vue';
 import CompanyView from '../views/Company.vue';
 import DashboardView from '../views/Dashboard.vue';
 import LoginView from '../views/Login.vue';
+import { useStore } from 'vuex';
+
+function requireAuth(to, from, next) {
+    const store = useStore();
+    const user = store.state.auth.user;
+    if (user) {
+        next();
+    } else {
+        next('/login');
+    }
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +51,7 @@ const router = createRouter({
       path: '/dashboard',
       name: 'Dashboard',
       component: DashboardView,
+      // beforeEnter: requireAuth,
     },
     // {
     //   path: '/about',
