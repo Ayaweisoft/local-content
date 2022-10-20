@@ -10,7 +10,7 @@
         console.log("starting")
         console.log({email, password})
         await doFetch("http://localhost:4000/api/user/login", {email: email.value, password: password.value});
-        console.log("fetched", { "data": data.value, "error": error.value, "loading": loading.value })
+        console.log("fetched", { "data": data.value, "error": error.value.message, "loading": loading.value })
     }
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-export default{
+export default {
     data: function(){
         return {
             hash: this.$route.hash,
@@ -45,11 +45,11 @@ export default{
     <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative" style="background-image: url('src/assets/Rectangle 139.svg')"></div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 md:max-h-[80vh] overflow-hidden">
       <div class="flex-1 overflow-hidden">
-        <img class="object-cover h-80 sm:h-96 w-full" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
+        <img class="object-cover w-full h-80 sm:h-96" src="../assets/Rectangle 140.svg" alt="Who We Are Image" />
       </div>
-      <div class="flex-1 flex flex-col gap-4 overflow-hidden justify-center">
+      <div class="flex flex-col justify-center flex-1 gap-4 overflow-hidden">
         <h2 class="text-[2rem] font-bold">Who we are</h2>
-        <p class="text-sm overflow-hidden">
+        <p class="overflow-hidden text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat ornare viverra dui bibendum. Non malesuada
           cursus lacus adipiscing lacus. Nullam in mi faucibus cum viverra. Duis a viverra arcu aliquet aliquam feugiat
           nunc. Tellus mauris habitasse posuere mus est senectus pharetra libero commodo. Turpis massa ac duis
@@ -81,27 +81,27 @@ export default{
     </div>
     <div class="px-10 py-14">
       <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
-      <div class="flex flex-col mt-8 relative">
-        <div class="flex gap-8 justify-between items-center">
-          <div class="w-40 lg:w-48 md:absolute top-4 text-xs">
+      <div class="relative flex flex-col mt-8">
+        <div class="flex items-center justify-between gap-8">
+          <div class="w-40 text-xs lg:w-48 md:absolute top-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
-          <div class="w-40 lg:w-48 md:absolute text-xs top-4 right-0">
+          <div class="right-0 w-40 text-xs lg:w-48 md:absolute top-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
         </div>
-        <div class="my-8 flex justify-center">
+        <div class="flex justify-center my-8">
           <img class="w-1/2" src="../assets/reasons.svg" alt="Member benefit chart">
           <span class="text-[6px] sm:text-xs md:text-base absolute top-1/2 text-white -translate-y-1/3 -translate-x-1/2 left-1/2">Member</span>
         </div>
-        <div class="flex gap-8 justify-between items-center">
-          <div class="w-40 lg:w-48 md:absolute text-xs bottom-0 left-0">
+        <div class="flex items-center justify-between gap-8">
+          <div class="bottom-0 left-0 w-40 text-xs lg:w-48 md:absolute">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
-          <div class="w-40 lg:w-48 md:absolute text-xs bottom-0 right-0">
+          <div class="bottom-0 right-0 w-40 text-xs lg:w-48 md:absolute">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
             Turpis.
           </div>
@@ -110,9 +110,9 @@ export default{
     </div>
     <div class="flex flex-col items-center justify-center gap-4 px-10 md:px-24 py-10 bg-[#2BC241] howToJoinUs">
       <h2 class="text-[2rem] text-center font-bold text-white">How To Join Us</h2>
-      <p class="md:mt-8 text-sm text-white mb-4 text-center">You can join us with just three steps listed below</p>
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6  md:gap-4 mb-12 card">
-        <div class="flex flex-col items-center justify-center md:w-1/3 gap-2 px-10 py-4 bg-white">
+      <p class="mb-4 text-sm text-center text-white md:mt-8">You can join us with just three steps listed below</p>
+      <div class="flex flex-col items-center justify-between gap-6 mb-12 md:flex-row md:gap-4 card">
+        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white md:w-1/3">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             1
           </div>
@@ -120,7 +120,7 @@ export default{
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
           </p>
         </div>
-        <div class="flex flex-col items-center justify-center md:w-1/3 gap-2 px-10 py-4 bg-white">
+        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white md:w-1/3">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             2
           </div>
@@ -128,7 +128,7 @@ export default{
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
           </p>
         </div>
-        <div class="flex flex-col items-center justify-center md:w-1/3 gap-2 px-10 py-4 bg-white">
+        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white md:w-1/3">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             3
           </div>
@@ -139,11 +139,11 @@ export default{
       </div>
       <button class="px-4 py-2 mt-8 font-medium bg-white sm:px-20 cursor-pointer active:scale-95 transition-all hover:bg-[#f0e8e8]"><RouterLink to="/register/individual" class="">Become a Member</RouterLink></button>
     </div>
-    <div class="px-10 md:px-24 py-12 pt-20 verifyYourMemberShip" id="verifyMembership">
+    <div class="px-10 py-12 pt-20 md:px-24 verifyYourMemberShip" id="verifyMembership">
       <div class="flex flex-col items-start justify-center sm:w-2/3 md:w-1/2 lg:w-2/5">
         <span class="text-2xl font-medium">Verify Your Membership</span>
         <input
-          class="w-full my-6 px-2 py-2 text-xs font-semibold border-2 outline-none"
+          class="w-full px-2 py-2 my-6 text-xs font-semibold border-2 outline-none"
           type="text"
           placeholder="Enter your membership number"
         />
@@ -151,11 +151,11 @@ export default{
       </div>
     </div>
     <div class="bg-cover bg-[url('assets/Rectangle5.svg')] grid place-items-center px-4 py-14 font-semibold">
-      <h1 class="text-2xl sm:text-3xl md:text-5xl text-white text-center py-8">Together we can <br> achieve great things</h1>
+      <h1 class="py-8 text-2xl text-center text-white sm:text-3xl md:text-5xl">Together we can <br> achieve great things</h1>
     </div>
     <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
       <div class="text-[3rem] font-semibold text-center sm:text-left">LOGO</div>
-      <p class="absolute text-sm font-semibold left-0 bottom-2 w-full text-center">Developed by Ayaweisoft</p>
+      <p class="absolute left-0 w-full text-sm font-semibold text-center bottom-2">Developed by Ayaweisoft</p>
     </div>
   </main>
 </template>
