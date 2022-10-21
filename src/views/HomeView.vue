@@ -67,9 +67,10 @@ export default {
       </div>
     </div>
     <div
-      class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 min-h-[60vh] text-white justify-center md:justify-between w-full bg-cover gap-4 md:gap-14 whatWeDo bg-[url('assets/Rectangle4.svg')] bg-center"
+      class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 min-h-[60vh] text-white justify-center md:justify-between w-full bg-cover gap-4 md:gap-1 bg-center relative"
       style=""
     >
+      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10 object-center" src="../assets/Rectangle4.svg" alt="mission statement background" />
       <div class="flex flex-col gap-4 missionStatement">
         <h2 class="text-[1.7rem] md:text-[2rem] font-bold text-center">Our Mission Statement</h2>
         <p class="text-sm sm:text-center">
@@ -150,7 +151,8 @@ export default {
         <button class="px-6 py-2 text-sm text-white bg-[#2BC241] hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Submit</button>
       </div>
     </div>
-    <div class="bg-cover bg-[url('assets/Rectangle5.svg')] grid place-items-center px-4 py-14 font-semibold">
+    <div class="bg-cover grid place-items-center px-4 py-14 font-semibold relative">
+      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/Rectangle5.svg" alt="background image" />
       <h1 class="py-8 text-2xl text-center text-white sm:text-3xl md:text-5xl">Together we can <br> achieve great things</h1>
     </div>
     <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
