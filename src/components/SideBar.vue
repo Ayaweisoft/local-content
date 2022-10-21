@@ -19,7 +19,7 @@
     <div class="border-r-2 p-4 py-8 sm:flex flex-col justify-between hidden sm:flex-auto">
         <div class="">
             <div class="flex justify-center flex-col gap-2 mb-12 items-center">
-                <img src="../assets/admin-pic.svg" alt="" />
+                <img src="../assets/logo.png" class="h-16 object-cover  bg-white rounded-full overflow-hidden" alt="LOGO">
                 <h4 class="text-[#979797]">Admin</h4>
             </div>
             <div class="flex flex-col gap-2">

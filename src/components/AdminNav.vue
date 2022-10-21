@@ -27,7 +27,9 @@
 
 <template>
     <header class="fixed sm:hidden bg-[#2BC241] sm:bg-white top-0 z-10 flex items-center justify-between w-full px-4 sm:px-8 md:px-16 py-2 shadow-md">
-        <RouterLink to="/dashboard" class="z-30 text-lg text-white sm:text-white" :class="{dark: navShow}">Admin</RouterLink>
+        <RouterLink to="/dashboard" class="z-30 text-lg text-white sm:text-white" :class="{dark: navShow}">
+            <img src="../assets/logo.png" class="h-12 object-cover  bg-white rounded-full overflow-hidden" alt="LOGO" />
+        </RouterLink>
         <button 
             class="flex gap-2 items-center p-3 rounded-xl bg-white cursor-pointer active:scale-95 transition-all"
             @click="logOut"

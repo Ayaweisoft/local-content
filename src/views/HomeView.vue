@@ -49,11 +49,11 @@ export default {
   <main class="w-full mt-12" id="home">
     <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
       <img class="object-cover w-full h-full" src="../assets/hero.png" alt="Hero image" />
+      <!-- <p class="text-white absolute top-1/2 -translate-y-1/2 text-5xl left-0 pl-8 py-4">Local Content Development and Promotions Council</p> -->
     </div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 md:max-h-[80vh] overflow-hidden">
       <div class="flex-1 overflow-hidden">
         <img class="object-cover w-full h-80 sm:h-96" src="../assets/Rectangle140.svg" alt="Who We Are Image" />
-        <!-- <p class="text-white absolute top-1/2 -translate-y-1/2 text-5xl left-0 pl-8 py-4">Local Content Development and Promotions Council</p> -->
       </div>
       <div class="flex flex-col justify-center flex-1 gap-4 overflow-hidden">
         <h2 class="text-[2rem] font-bold">Who we are</h2>
@@ -162,7 +162,9 @@ export default {
       <h1 class="py-8 text-2xl text-center text-white sm:text-3xl md:text-5xl">Together we can <br> achieve great things</h1>
     </div>
     <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
-      <div class="text-[3rem] font-semibold text-center sm:text-left">LOGO</div>
+      <div class="text-[3rem] font-semibold text-center sm:text-left flex justify-center sm:justify-start">
+        <img src="../assets/logo.png" class="h-24 object-cover  bg-white rounded-full overflow-hidden" alt="LOGO">
+      </div>
       <p class="absolute left-0 w-full text-sm font-semibold text-center bottom-2">Developed by Ayaweisoft</p>
     </div>
   </main>
