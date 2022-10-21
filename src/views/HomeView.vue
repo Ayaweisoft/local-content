@@ -42,7 +42,9 @@ export default {
 
 <template>
   <main class="w-full mt-12" id="home">
-    <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative" style="background-image: url('src/assets/Rectangle_home.svg')"></div>
+    <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
+      <img class="object-cover w-full h-full" src="../assets/hero.png" alt="Hero image" />
+    </div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 md:max-h-[80vh] overflow-hidden">
       <div class="flex-1 overflow-hidden">
         <img class="object-cover w-full h-80 sm:h-96" src="../assets/Rectangle140.svg" alt="Who We Are Image" />
