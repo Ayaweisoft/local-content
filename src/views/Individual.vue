@@ -1,6 +1,6 @@
 <script setup>
     import { ref } from 'vue'
-    import router from '../router';
+    import { useRouter } from 'vue-router'
     import Individual1 from "../components/Individual-1.vue"
     import Individual2 from "../components/Individual-2.vue"
     import Individual3 from "../components/Individual-3.vue"
@@ -8,6 +8,7 @@
 
     import { useFetch } from '../composables/useFetch.js'
 
+    const router = useRouter();
     const { data, error, loading, doFetch } = useFetch()
 
     const handleSubmit = async () => {

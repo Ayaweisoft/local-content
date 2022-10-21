@@ -1,7 +1,7 @@
 // fetch.js
 import { ref } from 'vue'
 
-export const useFetch = () => {
+export const useFetch = (auth) => {
     const data = ref(null);
     const error = ref(null);
     const loading = ref(false);
@@ -9,7 +9,6 @@ export const useFetch = () => {
     const doFetch = async(url, body) => {
         error.value = null;
         loading.value = true;
-
         
         const payload = body ? {
             method: "POST",
@@ -17,6 +16,11 @@ export const useFetch = () => {
             "Content-Type": "application/json",
             },
             body: JSON.stringify(body)
+        } : auth ? {
+            method: "GET",
+            headers: {
+                "authorization": `Bearer ${auth.token}`
+            }
         } : {};
 
         try {
@@ -24,17 +28,15 @@ export const useFetch = () => {
             const json = await response.json();
             
             if (!response.ok) {
-                console.log("not ok", json)
                 error.value = json;
                 loading.value = false;
             }
             if (response.ok) {
-                console.log("ok")
                 data.value = json;
                 loading.value = false;
             }
         } catch (err) {
-            console.log('error', err)
+            console.log("caught")
             loading.value = false;
             error.value = err;
         }

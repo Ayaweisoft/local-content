@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue'
-  import router from '../router';
+  import { useRouter } from 'vue-router'
   import Company1 from "../components/Company-1.vue";
   import Company2 from "../components/Company-2.vue";
   import Company3 from "../components/Company-3.vue";
@@ -8,6 +8,7 @@
   import { useFetch } from '../composables/useFetch.js'
 
   const step = ref(1)
+  const router = useRouter();
 
   const { data, error, loading, doFetch } = useFetch()
  

@@ -29,10 +29,8 @@
     const handleSubmit = async (user) => {
       loading.value = true;
       message.value = ''
-      console.log("starting: ", user)
       store.dispatch('auth/login', user).then(
         () => {
-          console.log("success")
           router.push("/dashboard");
         },
         (error) => {

@@ -1,9 +1,13 @@
 <script>
+import NavBar from '../components/NavBar.vue';
 export default {
     data: function(){
         return {
             hash: this.$route.hash,
         }
+    },
+    components: {
+      NavBar
     },
     mounted() {
         this.$nextTick(function () {
@@ -41,6 +45,7 @@ export default {
 <script></script>
 
 <template>
+<NavBar />
   <main class="w-full mt-12" id="home">
     <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
       <img class="object-cover w-full h-full" src="../assets/hero.png" alt="Hero image" />

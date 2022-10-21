@@ -7,7 +7,6 @@
     const route = useRoute();
 
     function logOut() {
-        console.log("clicked")
         store.dispatch('auth/logout');
         router.push('/login');
     } 
@@ -21,7 +20,7 @@
         <div class="">
             <div class="flex justify-center flex-col gap-2 mb-12 items-center">
                 <img src="../assets/admin-pic.svg" alt="" />
-                <h4 class="text-[#979797]">Admin Name</h4>
+                <h4 class="text-[#979797]">Admin</h4>
             </div>
             <div class="flex flex-col gap-2">
                 <span class="text-[#7E7D7D] text-sm">Menu</span>

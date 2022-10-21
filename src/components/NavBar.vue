@@ -16,7 +16,7 @@
 
 <template>
     <header class="fixed bg-[#2BC241] sm:bg-white top-0 z-10 flex items-center justify-between w-full px-4 sm:px-8 md:px-16 py-2 shadow-md">
-        <RouterLink to="/" class="z-30 text-white sm:text-white" :class="{dark: navShow}">Logo</RouterLink>
+        <RouterLink to="/" class="z-30 text-white sm:text-black" :class="{dark: navShow}">Logo</RouterLink>
         <button class="hover:animate-pulse p-2 z-30 rounded-lg sm:hidden focus:outline-none focus:shadow-outline" :class="{ hide: navShow }" @click.prevent="showNav">
 					<svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6" style="max-height: 1.5rem;">
             <path fill="#000000" v-if="navShow" x-show="open" fill-rule="evenodd"
