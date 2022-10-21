@@ -51,18 +51,18 @@ export default {
       <img class="object-cover w-full h-full" src="../assets/hero.png" alt="Hero image" />
       <!-- <p class="text-white absolute top-1/2 -translate-y-1/2 text-5xl left-0 pl-8 py-4">Local Content Development and Promotions Council</p> -->
     </div>
-    <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 md:max-h-[80vh] overflow-hidden">
-      <div class="flex-1 overflow-hidden">
+    <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 items-center md:max-h-[90vh] overflow-hidden">
+      <div class="flex-1 overflow-hidden w-full">
         <img class="object-cover w-full h-80 sm:h-96" src="../assets/Rectangle140.svg" alt="Who We Are Image" />
       </div>
       <div class="flex flex-col justify-center flex-1 gap-4 overflow-hidden">
         <h2 class="text-[2rem] font-bold">Who we are</h2>
         <p class="overflow-hidden text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat ornare viverra dui bibendum. Non malesuada
-          cursus lacus adipiscing lacus. Nullam in mi faucibus cum viverra. Duis a viverra arcu aliquet aliquam feugiat
-          nunc. Tellus mauris habitasse posuere mus est senectus pharetra libero commodo. Turpis massa ac duis
-          sollicitudin urna lorem vitae congue. Orci sed viverra morbi placerat amet molestie convallis. Rhoncus cursus
-          vitae in dolor tellus fermentum nulla amet. Suspendisse felis interdum massa varius ut malesuada sem. Ultrices
+          Nigerian Local content development and promotions council (NLCDPC) seeks to provide a formidable framework that promotes and encourages local content patronage beyond the oil and gas industry.
+
+          It's scope of operation spans across the oil and gas, agriculture, mining and manufacturing, ICT, Food processing, textile and automobile industries.
+
+          We understand that with an increased patronage in locally produced tools and skilled professionals aimed at servicing very crucial sectors we are sure to expect a such in economic growt and development of the nation.
         </p>
       </div>
     </div>
@@ -72,32 +72,26 @@ export default {
     >
       <div class="flex flex-col gap-4 missionStatement">
         <h2 class="text-[1.7rem] md:text-[2rem] font-bold text-center">Our Mission Statement</h2>
-        <p class="text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa egestas vestibulum sed a, ipsum ut feugiat
-          montes. Malesuada aliquam molestie neque vestibulum arcu morbi convallis lectus neque. Fringilla sem pulvinar
-          sed turpis donec leo amet.
+        <p class="text-sm sm:text-center">
+          We seek to provide a formidable framework that promotes and encourages local content investment, promotion and patronage
         </p>
       </div>
       <div class="flex flex-col gap-4 visionStatement">
         <h2 class="text-[1.7rem] md:text-[2rem] font-bold text-center">Our Vision Statement</h2>
-        <p class="text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa egestas vestibulum sed a, ipsum ut feugiat
-          montes. Malesuada aliquam molestie neque vestibulum arcu morbi convallis lectus neque. Fringilla sem pulvinar
-          sed turpis donec leo amet.
+        <p class="text-sm sm:text-center">
+          To lead a revolution of local professionals and organizations, championing the nations infrastructural and economic development
         </p>
       </div>
     </div>
     <div class="px-10 py-14">
       <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
       <div class="relative flex flex-col mt-8">
-        <div class="flex items-center justify-between gap-8">
-          <div class="w-40 text-xs lg:w-48 md:absolute top-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
-            Turpis.
+        <div class="flex items-center justify-between gap-8 w-full">
+          <div class="w-40 text-xs lg:w-48 md:absolute md:left-8 lg:left-20 top-4">
+            Would be needed for contract bidding and processing
           </div>
-          <div class="right-0 w-40 text-xs lg:w-48 md:absolute top-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
-            Turpis.
+          <div class="right-0 lg:right-16 w-40 text-xs lg:w-48 md:absolute top-4">
+            It is needed to gain access to loans, grants, investments
           </div>
         </div>
         <div class="flex justify-center my-8">
@@ -105,13 +99,11 @@ export default {
           <span class="text-[6px] sm:text-xs md:text-base absolute top-1/2 text-white -translate-y-1/3 -translate-x-1/2 left-1/2">Member</span>
         </div>
         <div class="flex items-center justify-between gap-8">
-          <div class="bottom-0 left-0 w-40 text-xs lg:w-48 md:absolute">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
-            Turpis.
+          <div class="bottom-0 left-0 w-40 text-xs lg:w-48 md:absolute md:left-8 lg:left-20">
+            Necessary requirement to be recommended by the organization
           </div>
-          <div class="bottom-0 right-0 w-40 text-xs lg:w-48 md:absolute">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim proin tortor bibendum egestas tellus lacus.
-            Turpis.
+          <div class="bottom-0 right-0 w-40 text-xs lg:w-48 md:absolute lg:right-16">
+            You would have access to all membership previledges
           </div>
         </div>
       </div>
@@ -119,29 +111,29 @@ export default {
     <div class="flex flex-col items-center justify-center gap-4 px-10 md:px-24 py-10 bg-[#2BC241] howToJoinUs">
       <h2 class="text-[2rem] text-center font-bold text-white">How To Join Us</h2>
       <p class="mb-4 text-sm text-center text-white md:mt-8">You can join us with just three steps listed below</p>
-      <div class="flex flex-col items-center justify-between gap-6 mb-12 md:flex-row md:gap-4 card">
-        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white md:w-1/3">
+      <div class="flex flex-col justify-between gap-6 mb-12 md:flex-row md:gap-4">
+        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white w-full md:w-1/3 rounded">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             1
           </div>
           <p class="text-sm text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
+            Click on become a member
           </p>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white md:w-1/3">
+        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white w-full md:w-1/3 rounded">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             2
           </div>
           <p class="text-sm text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
+            Register as Individual or company, make payments
           </p>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white md:w-1/3">
+        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white w-full md:w-1/3 rounded">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             3
           </div>
           <p class="text-sm text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate turpis nibh dapibus non.
+            Upon approval, print your your membership Identification card
           </p>
         </div>
       </div>

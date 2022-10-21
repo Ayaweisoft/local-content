@@ -14,7 +14,7 @@
   const fetchData = async () => {
       await doFetch("https://local-content-server.herokuapp.com/api/v1/submit");
       if (error.value) {
-          
+        console.log('returned errors: ', error.value.errors)
           if (error.value.errors?.message) {
               console.log('returned errors: ', error.value.errors?.message)
           } else {
