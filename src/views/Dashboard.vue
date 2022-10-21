@@ -21,7 +21,7 @@
 </script>
   
 <template>
-    <main class="flex w-full min-h-screen pt-12">
+    <main class="flex w-full min-h-screen sm:h-screen pt-12 sm:pt-0">
         <AdminNav />
         <SideBar />
         <MainDash />
