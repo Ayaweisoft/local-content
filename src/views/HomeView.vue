@@ -48,20 +48,23 @@ export default {
 <NavBar />
   <main class="w-full mt-12" id="home">
     <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
-      <img class="object-cover w-full h-full" src="../assets/hero.png" alt="Hero image" />
-      <p class="text-white absolute font-['Roboto'] top-1/2 w-full text-3xl -translate-y-1/2 px-4 md:text-5xl font-medium sm:px-28  md:px-40 lg:px-72 left-0 py-8 text-center backdrop-brightness-50">Local Content Development and Promotions Council</p>
+      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/hero.svg" alt="Hero image" />
+      <div class="flex h-full justify-center items-center px-12 sm:w-2/3">
+        <img src="../assets/herotext.svg" class="object-cover" alt="">
+      </div>
+      <!-- <p class="text-white absolute font-['Roboto'] top-1/2 w-full text-3xl -translate-y-1/2 px-4 md:text-5xl font-medium sm:px-28  md:px-40 lg:px-72 left-0 py-8 text-center backdrop-brightness-50">Local Content Development and Promotions Council</p> -->
     </div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 items-center md:max-h-[90vh] overflow-hidden">
       <div class="flex-1 overflow-hidden w-full">
-        <img class="object-cover w-full h-80 sm:h-96" src="../assets/Rectangle140.svg" alt="Who We Are Image" />
+        <img class="object-cover w-full h-80 sm:h-96" src="../assets/whoweare.svg" alt="Who We Are Image" />
       </div>
       <div class="flex flex-col justify-center flex-1 gap-4 overflow-hidden">
         <h2 class="text-[2rem] font-bold">Who we are</h2>
         <p class="overflow-hidden text-sm">
           Nigerian Local content development and promotions council (NLCDPC) seeks to provide a formidable framework that promotes and encourages local content patronage beyond the oil and gas industry.
-
+          <br><br>
           It's scope of operation spans across the oil and gas, agriculture, mining and manufacturing, ICT, Food processing, textile and automobile industries.
-
+          <br><br>
           We understand that with an increased patronage in locally produced tools and skilled professionals aimed at servicing very crucial sectors we are sure to expect a such in economic growt and development of the nation.
         </p>
       </div>
@@ -152,7 +155,7 @@ export default {
       </div>
     </div>
     <div class="bg-cover grid place-items-center px-4 py-14 font-semibold relative">
-      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/Rectangle5.svg" alt="background image" />
+      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/shake.svg" alt="background image" />
       <h1 class="py-8 text-2xl text-center text-white sm:text-3xl md:text-5xl">Together we can <br> achieve great things</h1>
     </div>
     <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
