@@ -49,7 +49,7 @@ export default {
   <main class="w-full mt-12" id="home">
     <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
       <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/hero.svg" alt="Hero image" />
-      <div class="flex h-full justify-center items-center px-12 sm:w-2/3">
+      <div class="flex h-full justify-center items-center md:pl-20 lg:px-20 px-12 md:w-1/2 sm:w-2/3">
         <img src="../assets/herotext.svg" class="object-cover" alt="">
       </div>
       <!-- <p class="text-white absolute font-['Roboto'] top-1/2 w-full text-3xl -translate-y-1/2 px-4 md:text-5xl font-medium sm:px-28  md:px-40 lg:px-72 left-0 py-8 text-center backdrop-brightness-50">Local Content Development and Promotions Council</p> -->
