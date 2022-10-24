@@ -1,10 +1,12 @@
 <script setup>
-    import { ref } from 'vue'
+    import InterswitchPay from '../components/InterswitchPay.vue'
+import { ref } from 'vue'
     import { useRouter } from 'vue-router'
     import Individual1 from "../components/Individual-1.vue"
     import Individual2 from "../components/Individual-2.vue"
     import Individual3 from "../components/Individual-3.vue"
     import Progress from "../components/Progress.vue"
+
 
     import { useFetch } from '../composables/useFetch.js'
 
@@ -69,9 +71,9 @@
   
 
 <template>
-    <div class="px-4 sm:px-16 text-sm">
+    <div class="px-4 text-sm sm:px-16">
         <Progress :step="step" />
-        <div class="error text-center text-red-600 mb-8">
+        <div class="mb-8 text-center text-red-600 error">
             {{ error && "Something went wrong" }}
             <!-- {{ error && error.errors?.message ? error.errors?.message : error ? error : "" }} -->
         </div>
