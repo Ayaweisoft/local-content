@@ -14,7 +14,7 @@
     const { data, error, loading, doFetch } = useFetch()
 
     const handleSubmit = async () => {
-        await doFetch("http://localhost:2020/api/v1/submit", registration);
+        await doFetch("https://local-content-server.herokuapp.com/api/v1/submit", registration);
         if (error.value) {
             console.log("error indiv", error.value)
             if (error.value.errors?.message) {
@@ -22,6 +22,7 @@
             }
         }
         else {
+            console.log(data)
             alert("your registration was successful")
             router.push('/')
         }
