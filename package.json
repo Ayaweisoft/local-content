@@ -2,6 +2,7 @@
   "proxy": "http://localhost:4000",
   "name": "local_content",
   "version": "0.0.0",
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
