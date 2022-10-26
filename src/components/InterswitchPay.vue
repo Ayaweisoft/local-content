@@ -1,10 +1,11 @@
 <script setup>
-    import Interswitch from 'vue-interswitch'
+    import { ref, onMounted} from "vue"
     import { useRouter } from 'vue-router'
-
+    
     const router = useRouter();
     const emit = defineEmits(['submit_form'])
     const props = defineProps(['registration'])
+
 
     const onCallback = (response) => {
         console.log('resp', response)
@@ -17,23 +18,29 @@
             router.push('/register/individual')
         }
     }
-    const onError = (err) => { 
-      console.log(err)
+    const txnref = ref(Date.now().toString());
+
+    var samplePaymentRequest = {
+        merchant_code: "MX46047",          
+        pay_item_id: "Default_Payable_MX46047",
+        txn_ref: txnref.value,
+        amount: 1000, 
+        currency: 566, // ISO 4217 numeric code of the currency used
+        onComplete: onCallback,
+        mode: 'LIVE',
+        site_redirect_url: "http://localhost:3000"
+    };
+
+
+    function initiatePayment(){
+        samplePaymentRequest.txn_ref = Date.now().toString();
+        console.log('payment started');
+        console.log(samplePaymentRequest)
+        window.webpayCheckout(samplePaymentRequest);
     }
 </script>
-
 <template>
-        <Interswitch  :debug="true" @error="onError"
-            merchantCode='MX46047'
-            payItemID='Default_Payable_MX46047'
-            customerEmail='johndoe@gmail.com'
-            redirectURL="http://localhost:5173"
-            currency=566
-            text="Register"
-            mode='LIVE'
-            :transactionReference="Date.now().toString()" 
-            :amount=10 
-            class="custom, bootstrap or tailwind class here"
-            :callback="onCallback"
-        />
+    <button @click.prevent="initiatePayment">
+            Register
+    </button>
 </template>
