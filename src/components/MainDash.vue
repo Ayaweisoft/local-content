@@ -1,9 +1,11 @@
 <script setup>  
   import { ref, onMounted, computed } from 'vue'
   import CardSuccess from "./CardSuccess.vue";
+  import QrcodeVue from 'qrcode.vue'
   import UserService from "../services/user.service";
   import { useFetch } from '../composables/useFetch.js'
   import { useStore } from 'vuex'
+  import domtoimage from 'dom-to-image';
   
   const store = useStore();
   const items3 = ref(null)
@@ -27,32 +29,67 @@
     await fetchData();
   })
 
+  var idCard = ref({
+    name: '',
+    email: '',
+    phone: '',
+  })
   
-  const modal = ref(null)
-  function generateCard(id) {
+  const modal = ref('')
+  const size = ref(93.5)
+  const idCardRef = ref(null);
+  const main = ref(null);
+  const dataUrl = ref(null);
+  const qr_code = ref('');
+
+  function generateCard(id, name, email, phone, type) {
     modal.value = id
-  }
+    idCard.value.name = name;
+    idCard.value.email = email;
+    idCard.value.phone = phone;
+    idCard.value.type = type;
+    qr_code.value = id;
+
+    const node = document.getElementById("idCardRef");
   
+    console.log('node: ', node);
+  
+    domtoimage.toPng(node)
+    .then(function (data) {
+        dataUrl.value = data;
+        console.log(data)
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong!', error);
+    });
+  }
+ 
+  function download(){
+    
+  }
+
   function closeModal() {
-      modal.value = null
+      modal.value = ''
+      dataUrl.value = null;
   }
 
   const headers = [
     { text: "ID Number", value: "_id" },
     { text: "Member Name", value: "name", sortable: true },
+    { text: "Email", value: "email", sortable: true },
+    { text: "Phone", value: "phone", sortable: true },
     { text: "Date Created", value: "created_at", sortable: true },
-    { text: "Status", value: "status", sortable: true },
     { text: "Membership type", value: "type", sortable: true },
     { text: "Actions", value: "actions", sortable: true }
   ];
   const items = computed(() => {
-    return data.value?.users?.data?.map(item => ({ "_id":item._id, "name":  `${item.name?.title} ${item.name?.last} ${item.name?.first}`, "created_at":item.createdAt, "status": item.status, "type": item.organization?.email ? "Company" : "Individual", "actions": "Generate" }))
+    console.log("data: ", data.value?.users?.data)
+    return data.value?.users?.data?.map(item => ({ "_id":item._id, "name":  `${item.name?.title} ${item.name?.last} ${item.name?.first}`, "created_at":item.createdAt, "email": item.organization?.email ? item.organization.email : item.email, "type": item.organization?.email ? "Company" : "Individual", "actions": "Generate" }))
   })
-  
-
 </script>
+
 <template>
-  <div class="py-16 p-8 sm:py-8 flex-[2_1_500px] md:flex-[2_1_600px] lg:flex-[4_1_900px]">
+  <div ref='main' class="py-16 p-8 sm:py-8 flex-[2_1_500px] md:flex-[2_1_600px] lg:flex-[4_1_900px]">
     <div class="relative mb-12">
         <input type="text" name="search" id="search" class="bg-[#D9D9D980] w-full py-2 px-4 rounded-full">
         <img src="../assets/search-icon.svg" alt="search" class="absolute -translate-y-1/2 top-1/2 left-5">
@@ -75,17 +112,58 @@
         </template>
         <template #item-actions="item">
           <div class="customize-item">
-            <button @click="generateCard(item._id)" class="w-full text-white bg-[#2BC241] py-1 px-2 hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">
+            <button @click="generateCard(item._id, item.name, item.email, item.phone, item.type)" class="w-full text-white bg-[#2BC241] py-1 px-2 hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">
               {{ item.actions }}
             </button>
           </div>
         </template>
       </EasyDataTable>  
     </div>
+    <!-- id card -->
+   <div class='absolute -top-[1000rem]'>
+     <div  ref="idCardRef" id="idCardRef" class="h-[25rem] flex gap-4 flex-col items-center py-8 px-4 w-80 bg-slate-100 relative">
+       <div class="h-2/3 w-1 bg-[#2BC241] absolute top-0 left-0"></div>
+       <div class="h-2/3 w-1 bg-[#2BC241] absolute right-0 bottom-0"></div>
+       <svg class="absolute top-0 right-0" width="185" height="57" viewBox="0 0 185 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M93 0H185V57L93 0Z" fill="#0D4915"/>
+         <path d="M0 0H185V26L0 0Z" fill="#2BC241"/>
+       </svg>
+       <svg class="absolute bottom-0 left-0" width="185" height="57" viewBox="0 0 185 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M92 57L1.90735e-06 57V3.57628e-07L92 57Z" fill="#0D4915"/>
+         <path d="M185 57L0 57V31L185 57Z" fill="#2BC241"/>
+       </svg>
+ 
+       <h1 class="uppercase font-bold text-center overflow-hidden break-words">Local Content Development and promotions council</h1>
+       <div class="h-24 w-24 border relative overflow-visible">
+         <svg class="absolute top-0 translate-x-2 -translate-y-2 right-0" width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M0 0H85V85H79.5V5H0V0Z" fill="#2BC241"/>
+         </svg>
+         <qrcode-vue :value="qr_code" :size="size" level="H"/>
+       </div>
+       <div class="w-full flex flex-col gap-2 items-center">
+         <div class="w-full flex">
+           <span class="font-semibold text-sm w-2/5 text-right pr-2 overflow-hidden break-words">Name:</span>
+           <span class="w-3/5 text-left pl-2 text-sm overflow-hidden break-words">{{idCard.name}}</span>
+         </div>
+         <div class="w-full flex">
+           <span class="overflow-hidden break-words font-semibold text-sm w-2/5 text-right pr-2">Email Address:</span>
+           <span class="overflow-hidden break-words w-3/5 text-left pl-2 text-sm">{{idCard.email}}</span>
+         </div>
+         <div class="w-full flex">
+           <span class="overflow-hidden break-words font-semibold text-sm w-2/5 text-right pr-2">Phone:</span>
+           <span class="overflow-hidden break-words w-3/5 text-left pl-2 text-sm">{{idCard.phone}}</span>
+         </div>
+         <div class="w-full flex">
+           <span class="overflow-hidden break-words font-semibold text-sm w-2/5 text-right pr-2">Category:</span>
+           <span class="overflow-hidden break-words w-3/5 text-left pl-2 text-sm">{{idCard.type}}</span>
+         </div>
+       </div>
+     </div>
+   </div>
   </div>
 
   <!-- modal -->
-  <CardSuccess :id="modal" v-if="modal" @close="closeModal" />
+  <CardSuccess :id="modal" :data="dataUrl" v-if="dataUrl" @close="closeModal" @download="download"/>
 </template>
   
   
