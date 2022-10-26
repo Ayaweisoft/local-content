@@ -24,7 +24,7 @@
         <div class="flex flex-col justify-between gap-4 mb-8 mt-28 sm:flex-row">
             <button @click.prevent="$emit('prevStep')" type="" class="bg-[#2BC241] text-white py-2 px-32 text-sm font-semibold hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Previous</button> 
             <button type="" @click.prevent class="bg-[#2BC241] text-sm font-semibold hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">
-                <InterswitchPay @submit_form="handleSubmit" class="w-full px-32 py-2 text-white" />
+                <InterswitchPay :registration="registration" @submit_form="handleSubmit" class="w-full px-32 py-2 text-white" />
             </button> 
         </div>
     </form>

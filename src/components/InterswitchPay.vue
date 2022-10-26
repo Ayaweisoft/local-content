@@ -4,10 +4,14 @@
 
     const router = useRouter();
     const emit = defineEmits(['submit_form'])
+    const props = defineProps(['registration'])
 
     const onCallback = (response) => {
         console.log('resp', response)
         if (response.resp == '00') {
+            props.registration.payment.paymentID = response.txnref;
+            props.registration.payment.amount = response.amount;
+            console.log('props.reg ', props.registration)
             emit('submit_form') 
         } else {
             router.push('/register/individual')

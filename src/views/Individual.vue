@@ -1,6 +1,6 @@
 <script setup>
     import InterswitchPay from '../components/InterswitchPay.vue'
-import { ref } from 'vue'
+    import { ref } from 'vue'
     import { useRouter } from 'vue-router'
     import Individual1 from "../components/Individual-1.vue"
     import Individual2 from "../components/Individual-2.vue"
@@ -30,49 +30,56 @@ import { ref } from 'vue'
     const step = ref(1)
 
     const registration = {
-      name: {
-              title: '',
-              first: '',
-              middle: '',
-              last: ''
-          },
-      email: '',
+        name: {
+                title: '',
+                first: '',
+                middle: '',
+                last: ''
+            },
+        email: '',
 
-      meta: {
-        gender: '',
-        maritalStatus: '',
-        religion:'',
-        dob: '',
-        nationality:'',
-        address: '',
-        nin: '',
-        phone: '',
-      },
+        meta: {
+            gender: '',
+            maritalStatus: '',
+            religion:'',
+            dob: '',
+            nationality:'',
+            address: '',
+            nin: '',
+            phone: '',
+        },
 
-      referee: {
-          name:'',
-          applicant_name:'',
-          gender:'',
-          occupation: '',
-          address: '',
-          phone: '',
-          email: '',
-          date: '',
-          signature: ''
-      },
+        referee: {
+            name:'',
+            applicant_name:'',
+            gender:'',
+            occupation: '',
+            address: '',
+            phone: '',
+            email: '',
+            date: '',
+            signature: ''
+        },
 
-      declaration: {
-          name: '',
-          date: '',
-          signature: ''
-      }
+        declaration: {
+            name: '',
+            date: '',
+            signature: ''
+        },
+
+        payment: {
+            paymentID: '',
+            amount: ""
+        }
     }
+
 </script>
   
 
 <template>
     <div class="px-4 text-sm sm:px-16">
         <Progress :step="step" />
+
         <div class="mb-8 text-center text-red-600 error">
             {{ error && "Something went wrong" }}
             <!-- {{ error && error.errors?.message ? error.errors?.message : error ? error : "" }} -->
