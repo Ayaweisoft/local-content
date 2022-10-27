@@ -1,5 +1,5 @@
 <script setup>
-    import InterswitchPay from '../components/InterswitchPay.vue'
+    import LoadingVue from '../components/Loading.vue'
     import { ref } from 'vue'
     import { useRouter } from 'vue-router'
     import Individual1 from "../components/Individual-1.vue"
@@ -79,6 +79,7 @@
 
 <template>
     <div class="px-4 text-sm sm:px-16">
+        <LoadingVue :isLoading="loading" /> <!-- Modal for Loading state -->
         <Progress :step="step" />
 
         <div class="mb-8 text-center text-red-600 error">

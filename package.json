@@ -19,6 +19,7 @@
     "vue": "^3.2.38",
     "vue-good-table": "^2.20.0",
     "vue-interswitch": "^1.0.6",
+    "vue-loading-overlay": "^5.0.3",
     "vue-router": "^4.1.5",
     "vue3-easy-data-table": "^1.5.0",
     "vuex": "^4.1.0",
