@@ -1,4 +1,5 @@
 <script setup>
+  import LoadingVue from '../components/Loading.vue'
   import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   import Company1 from "../components/Company-1.vue";
@@ -20,10 +21,11 @@
             console.log('returned errors', error.value.errors?.message)
         }
     }
-    else if (error.value == null && data.value.error == false) {
-        alert("your registration was successful")
-        router.push('/')
-    }
+    else {
+            console.log(data)
+            alert("your registration was successful")
+            router.push('/')
+        }
   }
 
 
@@ -62,12 +64,18 @@
         name: '',
         date: '',
         signature: ''
+    },
+
+    payment: {
+        paymentID: '',
+        amount: ""
     }
   }
 </script>
   
 <template> 
   <div class="px-4 sm:px-16 text-sm">
+    <LoadingVue :isLoading="loading" /> <!-- Modal for Loading state -->
     <Progress :step="step" />
     <div class="error text-center text-red-600 mb-8">
       {{ error && "Something went wrong" }}
