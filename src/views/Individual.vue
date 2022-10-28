@@ -1,10 +1,12 @@
 <script setup>
+    import LoadingVue from '../components/Loading.vue'
     import { ref } from 'vue'
     import { useRouter } from 'vue-router'
     import Individual1 from "../components/Individual-1.vue"
     import Individual2 from "../components/Individual-2.vue"
     import Individual3 from "../components/Individual-3.vue"
     import Progress from "../components/Progress.vue"
+
 
     import { useFetch } from '../composables/useFetch.js'
 
@@ -14,12 +16,13 @@
     const handleSubmit = async () => {
         await doFetch("https://local-content-server.herokuapp.com/api/v1/submit", registration);
         if (error.value) {
-            console.log("error")
+            console.log("error indiv", error.value)
             if (error.value.errors?.message) {
                 console.log('returned errors', error.value.errors?.message)
             }
         }
-        else if (error.value == null && data.value.error == false) {
+        else {
+            console.log(data)
             alert("your registration was successful")
             router.push('/')
         }
@@ -28,50 +31,58 @@
     const step = ref(1)
 
     const registration = {
-      name: {
-              title: '',
-              first: '',
-              middle: '',
-              last: ''
-          },
-      email: '',
+        name: {
+                title: '',
+                first: '',
+                middle: '',
+                last: ''
+            },
+        email: '',
 
-      meta: {
-        gender: '',
-        maritalStatus: '',
-        religion:'',
-        dob: '',
-        nationality:'',
-        address: '',
-        nin: '',
-        phone: '',
-      },
+        meta: {
+            gender: '',
+            maritalStatus: '',
+            religion:'',
+            dob: '',
+            nationality:'',
+            address: '',
+            nin: '',
+            phone: '',
+        },
 
-      referee: {
-          name:'',
-          applicant_name:'',
-          gender:'',
-          occupation: '',
-          address: '',
-          phone: '',
-          email: '',
-          date: '',
-          signature: ''
-      },
+        referee: {
+            name:'',
+            applicant_name:'',
+            gender:'',
+            occupation: '',
+            address: '',
+            phone: '',
+            email: '',
+            date: '',
+            signature: ''
+        },
 
-      declaration: {
-          name: '',
-          date: '',
-          signature: ''
-      }
+        declaration: {
+            name: '',
+            date: '',
+            signature: ''
+        },
+
+        payment: {
+            paymentID: '',
+            amount: ""
+        }
     }
+
 </script>
   
 
 <template>
-    <div class="px-4 sm:px-16 text-sm">
+    <div class="px-4 text-sm sm:px-16">
+        <LoadingVue :isLoading="loading" /> <!-- Modal for Loading state -->
         <Progress :step="step" />
-        <div class="error text-center text-red-600 mb-8">
+
+        <div class="mb-8 text-center text-red-600 error">
             {{ error && "Something went wrong" }}
             <!-- {{ error && error.errors?.message ? error.errors?.message : error ? error : "" }} -->
         </div>
