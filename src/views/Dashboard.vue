@@ -5,7 +5,7 @@
     import QrCodeScanner from '../components/QrCodeScanner.vue';
     import { useStore } from 'vuex'
     import { ref, onMounted } from 'vue';
-    import { useRouter, useRoute, RouterView, RouterLink } from 'vue-router'
+    import { useRouter, useRoute, RouterView } from 'vue-router'
 
     const store = useStore();
     const router = useRouter();

@@ -1,5 +1,5 @@
 <script setup>
-    import { useRouter, useRoute } from 'vue-router'
+    import { useRouter, useRoute, RouterLink } from 'vue-router'
     import { useStore } from 'vuex'
 
     const store = useStore();
@@ -26,7 +26,7 @@
                 <span class="text-[#7E7D7D] text-sm">Menu</span>
                 <button class="flex gap-2 md:gap-4 items-center bg-[#2bc24126] p-3 px-2 lg:p-3 rounded-xl hover:bg-[#31803d26] cursor-pointer active:scale-95 transition-all">
                     <img src="../assets/dash-icon.svg" alt="" />
-                    <RouterLink class="text-sm font-medium" to="/dashboard/main">Dashboard</RouterLink>
+                    <RouterLink class="text-sm font-medium" to="/dashboard">Dashboard</RouterLink>
                 </button>
                 <button class="flex gap-2 md:gap-4 items-center bg-[#2bc24126] p-3 px-2 lg:p-3 rounded-xl hover:bg-[#31803d26] cursor-pointer active:scale-95 transition-all">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
