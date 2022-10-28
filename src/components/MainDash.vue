@@ -1,5 +1,6 @@
 <script setup>  
   import { ref, onMounted, computed } from 'vue'
+  import { useRouter } from 'vue-router'
   import CardSuccess from "./CardSuccess.vue";
   import QrcodeVue from 'qrcode.vue'
   import UserService from "../services/user.service";
@@ -8,6 +9,7 @@
   import domtoimage from 'dom-to-image';
   
   const store = useStore();
+  const router = useRouter();
 
   const user = store.state?.auth?.user;
   const { data, error, loading, doFetch } = useFetch({token: user?.accessToken, method: "GET"})
