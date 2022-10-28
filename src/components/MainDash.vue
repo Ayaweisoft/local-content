@@ -4,11 +4,12 @@
   import CardSuccess from "./CardSuccess.vue";
   import QrcodeVue from 'qrcode.vue'
   import UserService from "../services/user.service";
+  import LoadingVue from './Loading.vue'
   import { useFetch } from '../composables/useFetch.js'
   import { useStore } from 'vuex'
   import domtoimage from 'dom-to-image';
   
-  const store = useStore();
+  const store = useStore(); 
   const router = useRouter();
 
   const user = store.state?.auth?.user;
@@ -109,6 +110,7 @@
 
 <template>
   <div ref='main' class="py-16 p-8 sm:py-8 flex-[2_1_500px] md:flex-[2_1_600px] lg:flex-[4_1_900px]">
+    <LoadingVue :isLoading="loading" /> <!-- Modal for Loading state -->
     <div class="relative mb-12">
         <input type="text" name="search" id="search" class="bg-[#D9D9D980] w-full py-2 px-4 rounded-full">
         <img src="../assets/search-icon.svg" alt="search" class="absolute -translate-y-1/2 top-1/2 left-5">
