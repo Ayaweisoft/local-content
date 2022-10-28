@@ -10,7 +10,7 @@
   const store = useStore();
 
   const user = store.state?.auth?.user;
-  const { data, error, loading, doFetch } = useFetch({token: user.accessToken, method: "GET"})
+  const { data, error, loading, doFetch } = useFetch({token: user?.accessToken, method: "GET"})
 
   function logOut() {
         store.dispatch('auth/logout');
@@ -20,7 +20,7 @@
   const fetchData = async () => {
       await doFetch("https://local-content-server.herokuapp.com/api/v1/submit");
       if (error.value) {
-        if (error?.value?.message.includes("Unauthorized access")) {
+        if (error?.value?.message?.includes("Unauthorized access")) {
           logOut();
         }
         console.log('returned errors: ', error.value.errors)

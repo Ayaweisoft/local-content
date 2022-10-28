@@ -47,7 +47,7 @@ export default {
 <template>
 <NavBar />
   <main class="w-full mt-12" id="home">
-    <div class="bg-cover h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
+    <div class="bg-cover bg-black -z-30 h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
       <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/hero.svg" alt="Hero image" />
       <div class="flex h-full justify-center items-center md:pl-20 lg:px-20 px-12 md:w-1/2 sm:w-2/3">
         <img src="../assets/herotext.svg" class="object-cover" alt="">
@@ -55,7 +55,7 @@ export default {
       <!-- <p class="text-white absolute font-['Roboto'] top-1/2 w-full text-3xl -translate-y-1/2 px-4 md:text-5xl font-medium sm:px-28  md:px-40 lg:px-72 left-0 py-8 text-center backdrop-brightness-50">Local Content Development and Promotions Council</p> -->
     </div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 items-center md:max-h-[90vh] overflow-hidden">
-      <div class="flex-1 overflow-hidden w-full">
+      <div class="flex-1 overflow-hidden w-full bg-black -z-30">
         <img class="object-cover w-full h-80 sm:h-96" src="../assets/whoweare.svg" alt="Who We Are Image" />
       </div>
       <div class="flex flex-col justify-center flex-1 gap-4 overflow-hidden">
@@ -70,9 +70,7 @@ export default {
       </div>
     </div>
     <div
-      class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 min-h-[60vh] text-white justify-center md:justify-between w-full bg-cover gap-4 md:gap-1 bg-center relative"
-      style=""
-    >
+      class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 min-h-[60vh] text-white justify-center md:justify-between w-full bg-cover gap-4 md:gap-1 bg-center relative  bg-black -z-30">
       <img class="object-cover absolute top-0 w-full h-full left-0 -z-10 object-center" src="../assets/Rectangle4.svg" alt="mission statement background" />
       <div class="flex flex-col gap-4 missionStatement">
         <h2 class="text-[1.7rem] md:text-[2rem] font-bold text-center">Our Mission Statement</h2>
@@ -154,7 +152,7 @@ export default {
         <button class="px-6 py-2 text-sm text-white bg-[#2BC241] hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Submit</button>
       </div>
     </div>
-    <div class="bg-cover grid place-items-center px-4 py-14 font-semibold relative">
+    <div class="bg-cover grid place-items-center px-4 py-14 font-semibold relative bg-black -z-30">
       <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/shake.svg" alt="background image" />
       <h1 class="py-8 text-2xl text-center text-white sm:text-3xl md:text-5xl">Together we can <br> achieve great things</h1>
     </div>

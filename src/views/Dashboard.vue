@@ -11,7 +11,7 @@
     const router = useRouter();
     const route = useRoute();
 
-    const user = store.state.auth.user;
+    const user = store?.state?.auth.user;
     
     onMounted(() => {
         if (!user) {
