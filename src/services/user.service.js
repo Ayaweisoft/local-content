@@ -9,7 +9,13 @@ class UserService {
   }
 
   getAllUserDetails() {
+    
     return axios.get(API_URL , { headers: authHeader() });
+  }
+
+  getOneUserDetail(id) {
+    console.log('called: ', authHeader());
+    return axios.get(API_URL + '/' + id, { headers: authHeader() });
   }
 }
 

@@ -4,6 +4,8 @@ import RegisterView from '../views/RegisterView.vue';
 import IndividualView from '../views/Individual.vue';
 import CompanyView from '../views/Company.vue';
 import DashboardView from '../views/Dashboard.vue';
+import MainDash from '../components/MainDash.vue';
+import QrCodeScanner from '../components/QrCodeScanner.vue';
 import LoginView from '../views/Login.vue';
 import { useStore } from 'vuex';
 
@@ -52,6 +54,18 @@ const router = createRouter({
       name: 'Dashboard',
       component: DashboardView,
       // beforeEnter: requireAuth,
+      children: [
+        {
+          path: '/main',
+          name: 'MainDash',
+          component: MainDash,
+        },
+        {
+          path: '/scan',
+          name: 'QrCodeScanner',
+          component: QrCodeScanner,
+        },
+      ]
     },
     // {
     //   path: '/about',

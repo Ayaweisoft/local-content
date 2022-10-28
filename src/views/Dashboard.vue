@@ -2,9 +2,10 @@
     import SideBar from '../components/SideBar.vue'
     import MainDash from '../components/MainDash.vue'
     import AdminNav from '../components/AdminNav.vue';
+    import QrCodeScanner from '../components/QrCodeScanner.vue';
     import { useStore } from 'vuex'
     import { ref, onMounted } from 'vue';
-    import { useRouter, useRoute } from 'vue-router'
+    import { useRouter, useRoute, RouterView, RouterLink } from 'vue-router'
 
     const store = useStore();
     const router = useRouter();
@@ -21,9 +22,11 @@
 </script>
   
 <template>
-    <main class="flex w-full min-h-screen sm:h-screen pt-12 sm:pt-0">
+    <main class="flex w-full min-h-screen pt-12 sm:h-screen sm:pt-0">
         <AdminNav />
         <SideBar />
-        <MainDash />
+        <RouterView />
+        <!-- <MainDash /> -->
+        <!-- <QrCodeScanner /> -->
     </main>
 </template>

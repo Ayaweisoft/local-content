@@ -84,7 +84,14 @@
   ];
   const items = computed(() => {
     console.log("data: ", data.value?.users?.data)
-    return data.value?.users?.data?.map(item => ({ "_id":item._id, "name":  `${item.name?.title} ${item.name?.last} ${item.name?.first}`, "created_at":item.createdAt, "email": item.organization?.email ? item.organization.email : item.email, "type": item.organization?.email ? "Company" : "Individual", "actions": "Generate" }))
+    return data.value?.users?.data?.map(item => ({ 
+      "_id":item._id, 
+      "name":  `${item.name?.title} ${item.name?.last} ${item.name?.first}`, 
+      "created_at":item.createdAt, "email": item.organization?.email ? item.organization.email : item.email, 
+      "type": item.organization?.email ? "Company" : "Individual", 
+      "actions": "Generate",
+      "phone": item.meta?.phone
+    }))
   })
 </script>
 
@@ -96,7 +103,7 @@
         <span class="absolute text-sm -translate-y-1/2 top-1/2 left-16 opacity-70">search for member</span>
     </div>
     <h2 class="text-[#2BC241] text-2xl sm:text-[27px] py-4 font-medium mb-12 sm:text-left text-center">List of Registered Members</h2>
-    <div v-if="error" class="error text-center text-red-600 mb-8">
+    <div v-if="error" class="mb-8 text-center text-red-600 error">
       {{ error && "Something went wrong" }} <br>
       {{ error && error.errors?.message ? error.errors?.message : error ? error : "" }}
     </div>
@@ -133,29 +140,29 @@
          <path d="M185 57L0 57V31L185 57Z" fill="#2BC241"/>
        </svg>
  
-       <h1 class="uppercase font-bold text-center overflow-hidden break-words">Local Content Development and promotions council</h1>
-       <div class="h-24 w-24 border relative overflow-visible">
-         <svg class="absolute top-0 translate-x-2 -translate-y-2 right-0" width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <h1 class="overflow-hidden font-bold text-center uppercase break-words">Local Content Development and promotions council</h1>
+       <div class="relative w-24 h-24 overflow-visible border">
+         <svg class="absolute top-0 right-0 translate-x-2 -translate-y-2" width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
            <path d="M0 0H85V85H79.5V5H0V0Z" fill="#2BC241"/>
          </svg>
          <qrcode-vue :value="qr_code" :size="size" level="H"/>
        </div>
-       <div class="w-full flex flex-col gap-2 items-center">
-         <div class="w-full flex">
-           <span class="font-semibold text-sm w-2/5 text-right pr-2 overflow-hidden break-words">Name:</span>
-           <span class="w-3/5 text-left pl-2 text-sm overflow-hidden break-words">{{idCard.name}}</span>
+       <div class="flex flex-col items-center w-full gap-2">
+         <div class="flex w-full">
+           <span class="w-2/5 pr-2 overflow-hidden text-sm font-semibold text-right break-words">Name:</span>
+           <span class="w-3/5 pl-2 overflow-hidden text-sm text-left break-words">{{idCard.name}}</span>
          </div>
-         <div class="w-full flex">
-           <span class="overflow-hidden break-words font-semibold text-sm w-2/5 text-right pr-2">Email Address:</span>
-           <span class="overflow-hidden break-words w-3/5 text-left pl-2 text-sm">{{idCard.email}}</span>
+         <div class="flex w-full">
+           <span class="w-2/5 pr-2 overflow-hidden text-sm font-semibold text-right break-words">Email Address:</span>
+           <span class="w-3/5 pl-2 overflow-hidden text-sm text-left break-words">{{idCard.email}}</span>
          </div>
-         <div class="w-full flex">
-           <span class="overflow-hidden break-words font-semibold text-sm w-2/5 text-right pr-2">Phone:</span>
-           <span class="overflow-hidden break-words w-3/5 text-left pl-2 text-sm">{{idCard.phone}}</span>
+         <div class="flex w-full">
+           <span class="w-2/5 pr-2 overflow-hidden text-sm font-semibold text-right break-words">Phone:</span>
+           <span class="w-3/5 pl-2 overflow-hidden text-sm text-left break-words">{{idCard.phone}}</span>
          </div>
-         <div class="w-full flex">
-           <span class="overflow-hidden break-words font-semibold text-sm w-2/5 text-right pr-2">Category:</span>
-           <span class="overflow-hidden break-words w-3/5 text-left pl-2 text-sm">{{idCard.type}}</span>
+         <div class="flex w-full">
+           <span class="w-2/5 pr-2 overflow-hidden text-sm font-semibold text-right break-words">Category:</span>
+           <span class="w-3/5 pl-2 overflow-hidden text-sm text-left break-words">{{idCard.type}}</span>
          </div>
        </div>
      </div>
