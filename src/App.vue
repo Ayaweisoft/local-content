@@ -6,5 +6,5 @@ import { RouterLink, RouterView } from 'vue-router';
 <template>
   <div class="scroll-smooth ">
     <RouterView />
-  </div>
+  </div>  
 </template>

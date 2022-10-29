@@ -41,6 +41,6 @@
 </script>
 <template>
     <button @click.prevent="initiatePayment">
-            Register
+        Register
     </button>
 </template>
