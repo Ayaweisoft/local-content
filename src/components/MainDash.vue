@@ -8,20 +8,30 @@
   import domtoimage from 'dom-to-image';
   
   const store = useStore();
-  const items3 = ref(null)
-  const user = store.state?.auth?.user;
-  const { data, error, loading, doFetch } = useFetch({token: user.accessToken, method: "GET"})
 
+  const user = store.state?.auth?.user;
+  const { data, error, loading, doFetch } = useFetch({token: user?.accessToken, method: "GET"})
+
+  function logOut() {
+        store.dispatch('auth/logout');
+        router.push('/login');
+    } 
 
   const fetchData = async () => {
       await doFetch("https://local-content-server.herokuapp.com/api/v1/submit");
       if (error.value) {
+        if (error?.value?.message?.includes("Unauthorized access")) {
+          logOut();
+        }
         console.log('returned errors: ', error.value.errors)
-          if (error.value.errors?.message) {
-              console.log('returned errors: ', error.value.errors?.message)
-          } else {
-            console.log("error: ", error.value)
+        if (error.value.errors?.message) {
+          console.log('returned errors: ', error.value.errors?.message)
+          if (error.value.errors?.message.includes("Unauthorized access")) {
+            logOut();
           }
+        } else {
+          console.log("error: ", error.value)
+        }
       }
   }
   

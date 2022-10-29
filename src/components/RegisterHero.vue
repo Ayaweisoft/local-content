@@ -13,10 +13,14 @@
   
   <template>
     <div class="pt-12">
-      <div class="sm:block flex items-center justify-center flex-col bg-cover px-8 sm:px-16 py-12 text-white overflow-hidden whoWeArePic bg-[url('./assets/register.svg')]">
-        <h2 class="mb-6 text-2xl font-medium sm:text-left text-center">Welcome to the registration page</h2>
-        <span class="">Become a part of us today</span>
-      </div> 
+        <div class="sm:block flex items-center justify-center flex-col bg-cover px-8 sm:px-16 py-12 text-white overflow-hidden whoWeArePic bg-black -z-30 bg-[url('./assets/register.svg')]">
+            <h2 class="mb-6 text-2xl font-medium sm:text-left text-center">
+                Welcome to the registration page
+            </h2>
+            <span class="">
+                Become a part of us today
+            </span>
+        </div> 
           
       <div class="py-2 pt-6 text-center px-4 sm:px-16">
         <p class="mb-2 text-sm opacity-">Choose your type of registration</p>

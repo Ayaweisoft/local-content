@@ -56,12 +56,12 @@ const router = createRouter({
       // beforeEnter: requireAuth,
       children: [
         {
-          path: '/main',
+          path: '',
           name: 'MainDash',
           component: MainDash,
         },
         {
-          path: '/scan',
+          path: 'scan',
           name: 'QrCodeScanner',
           component: QrCodeScanner,
         },
