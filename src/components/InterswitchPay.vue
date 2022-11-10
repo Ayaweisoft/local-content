@@ -22,7 +22,7 @@
 
     var samplePaymentRequest = {
         merchant_code: "MX46047",          
-        pay_item_id: "7979784",
+        pay_item_id: "9253121",
         txn_ref: txnref.value,
         amount: 1000, 
         currency: 566, // ISO 4217 numeric code of the currency used
