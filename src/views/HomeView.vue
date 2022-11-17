@@ -48,14 +48,14 @@ export default {
 <NavBar />
   <main class="w-full mt-12" id="home">
     <div class="bg-cover bg-black -z-30 h-[50vh] sm:h-[70vh] md:h-[75vh] w-full landing relative">
-      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/hero.svg" alt="Hero image" />
-      <div class="flex h-full justify-center items-center md:pl-20 lg:px-20 px-12 md:w-1/2 sm:w-2/3">
+      <img class="absolute top-0 left-0 object-cover w-full h-full -z-10" src="../assets/hero.svg" alt="Hero image" />
+      <div class="flex items-center justify-center h-full px-12 md:pl-20 lg:px-20 md:w-1/2 sm:w-2/3">
         <img src="../assets/herotext.svg" class="object-cover" alt="">
       </div>
       <!-- <p class="text-white absolute font-['Roboto'] top-1/2 w-full text-3xl -translate-y-1/2 px-4 md:text-5xl font-medium sm:px-28  md:px-40 lg:px-72 left-0 py-8 text-center backdrop-brightness-50">Local Content Development and Promotions Council</p> -->
     </div>
     <div class="flex flex-col md:flex-row gap-14 py-14 px-10 md:px-20 items-center md:max-h-[90vh] overflow-hidden">
-      <div class="flex-1 overflow-hidden w-full bg-black -z-30">
+      <div class="flex-1 w-full overflow-hidden bg-black -z-30">
         <img class="object-cover w-full h-80 sm:h-96" src="../assets/whoweare.svg" alt="Who We Are Image" />
       </div>
       <div class="flex flex-col justify-center flex-1 gap-4 overflow-hidden">
@@ -71,7 +71,7 @@ export default {
     </div>
     <div
       class="flex md:flex-row flex-col items-center px-10 md:px-24 py-8 min-h-[60vh] text-white justify-center md:justify-between w-full bg-cover gap-4 md:gap-1 bg-center relative  bg-black -z-30">
-      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10 object-center" src="../assets/Rectangle4.svg" alt="mission statement background" />
+      <img class="absolute top-0 left-0 object-cover object-center w-full h-full -z-10" src="../assets/Rectangle4.svg" alt="mission statement background" />
       <div class="flex flex-col gap-4 missionStatement">
         <h2 class="text-[1.7rem] md:text-[2rem] font-bold text-center">Our Mission Statement</h2>
         <p class="text-sm sm:text-center">
@@ -88,11 +88,11 @@ export default {
     <div class="px-10 py-14">
       <h2 class="text-[2rem] text-center font-bold">Why You Should Join Us</h2>
       <div class="relative flex flex-col mt-8">
-        <div class="flex items-center justify-between gap-8 w-full">
+        <div class="flex items-center justify-between w-full gap-8">
           <div class="w-40 text-xs lg:w-48 md:absolute md:left-8 lg:left-20 top-4">
             Would be needed for contract bidding and processing
           </div>
-          <div class="right-0 lg:right-16 w-40 text-xs lg:w-48 md:absolute top-4">
+          <div class="right-0 w-40 text-xs lg:right-16 lg:w-48 md:absolute top-4">
             It is needed to gain access to loans, grants, investments
           </div>
         </div>
@@ -114,7 +114,7 @@ export default {
       <h2 class="text-[2rem] text-center font-bold text-white">How To Join Us</h2>
       <p class="mb-4 text-sm text-center text-white md:mt-8">You can join us with just three steps listed below</p>
       <div class="flex flex-col justify-between gap-6 mb-12 md:flex-row md:gap-4">
-        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white w-full md:w-1/3 rounded">
+        <div class="flex flex-col items-center justify-center w-full gap-2 px-10 py-4 bg-white rounded md:w-1/3">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             1
           </div>
@@ -122,7 +122,7 @@ export default {
             Click on become a member
           </p>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white w-full md:w-1/3 rounded">
+        <div class="flex flex-col items-center justify-center w-full gap-2 px-10 py-4 bg-white rounded md:w-1/3">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             2
           </div>
@@ -130,7 +130,7 @@ export default {
             Register as Individual or company, make payments
           </p>
         </div>
-        <div class="flex flex-col items-center justify-center gap-2 px-10 py-4 bg-white w-full md:w-1/3 rounded">
+        <div class="flex flex-col items-center justify-center w-full gap-2 px-10 py-4 bg-white rounded md:w-1/3">
           <div class="text-[1rem] font-bold bg-green-200 text-[#2BC241] rounded-full h-12 w-12 grid place-items-center">
             3
           </div>
@@ -152,13 +152,26 @@ export default {
         <button class="px-6 py-2 text-sm text-white bg-[#2BC241] hover:bg-[#1ba330] cursor-pointer active:scale-95 transition-all">Submit</button>
       </div>
     </div>
-    <div class="bg-cover grid place-items-center px-4 py-14 font-semibold relative bg-black -z-30">
-      <img class="object-cover absolute top-0 w-full h-full left-0 -z-10" src="../assets/shake.svg" alt="background image" />
+    <div class="relative grid px-4 font-semibold bg-black bg-cover place-items-center py-14 -z-30">
+      <img class="absolute top-0 left-0 object-cover w-full h-full -z-10" src="../assets/shake.svg" alt="background image" />
       <h1 class="py-8 text-2xl text-center text-white sm:text-3xl md:text-5xl">Together we can <br> achieve great things</h1>
     </div>
-    <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-20">
-      <div class="text-[3rem] font-semibold text-center sm:text-left flex justify-center sm:justify-start">
-        <img src="../assets/logo.png" class="h-24 object-cover  bg-white rounded-full overflow-hidden" alt="LOGO">
+    <div class="footer bg-[#2BC241] relative px-10 md:px-24 text-white py-4 pb-10 sm:py-10 sm:pb-16">
+      <div class="flex flex-col items-center font-semibold text-center sm:flex-row sm:text-left sm:justify-start">
+        <img src="../assets/logo.png" class="object-cover h-24 overflow-hidden bg-white rounded-full" alt="LOGO">
+        <div class="w-2/3 mx-auto mt-4">
+          <h2 class="mb-4 text-2xl">Contacts</h2>
+          <div class="flex flex-col gap-6 mb-4 sm:m-0 opacity-95">
+            <div>
+              Tell: 07084232611, 08066810524<br>
+              Email address: nlcdpc11@gmail.com<br>
+            </div>
+            <div>
+              Abuja office address: 13 Mambila street, off Aso Drive, Maitama <br>
+              Abuja Bayelsa address: 2nd floor okolobian plaza Isaac boro express way, Opp. Prosco okaka, yenagoa, bayelsa state
+            </div>
+          </div>    
+        </div>
       </div>
       <p class="absolute left-0 w-full text-sm font-semibold text-center bottom-2">Developed by Ayaweisoft</p>
     </div>
