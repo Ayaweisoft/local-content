@@ -163,8 +163,8 @@ export default {
           <h2 class="mb-4 text-2xl">Contacts</h2>
           <div class="flex flex-col gap-6 mb-4 sm:m-0 opacity-95">
             <div>
-              Tel: 07084232611, 08066810524<br>
-              Email Address: nlcdpc11@gmail.com<br>
+              Tel: <a href="tel:+2347084232611" class="font-medium underline underline-offset-2 hover:underline">07084232611</a>, <a href="tel:+2348066810524" class="font-medium underline underline-offset-2 hover:underline">08066810524</a><br>
+              Email Address: <a href="mailto:nlcdpc11@gmail.com" class="font-medium underline underline-offset-2 hover:underline">nlcdpc11@gmail.com</a><br>
             </div>
             <div>
               Address_1: 13 Mambila street, off Aso Drive, Maitama, Abuja <br>
