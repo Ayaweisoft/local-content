@@ -163,12 +163,12 @@ export default {
           <h2 class="mb-4 text-2xl">Contacts</h2>
           <div class="flex flex-col gap-6 mb-4 sm:m-0 opacity-95">
             <div>
-              Tell: 07084232611, 08066810524<br>
-              Email address: nlcdpc11@gmail.com<br>
+              Tel: 07084232611, 08066810524<br>
+              Email Address: nlcdpc11@gmail.com<br>
             </div>
             <div>
-              Abuja office address: 13 Mambila street, off Aso Drive, Maitama <br>
-              Abuja Bayelsa address: 2nd floor okolobian plaza Isaac boro express way, Opp. Prosco okaka, yenagoa, bayelsa state
+              Address_1: 13 Mambila street, off Aso Drive, Maitama, Abuja <br>
+              Address_2: 2nd floor okolobian plaza Isaac boro express way, Opp. Prosco okaka, yenagoa, Bayelsa state
             </div>
           </div>    
         </div>
